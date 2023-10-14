@@ -1,0 +1,19 @@
+@import "misc";
+@import "centerDiv.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: $myFont;
+}
+
+img {
+  width: 100vw;
+  height: 65vh;
+}
+.center-text-form {
+  width: 50vw;
+}
