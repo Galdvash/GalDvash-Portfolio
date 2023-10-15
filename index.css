@@ -53,7 +53,7 @@ li {
 .profile img {
   width: 45px;
   position: fixed;
-  top: 6.5px;
+  top: px;
   left: 200px;
   box-shadow: 0px 2px 10px #13eaf1bd;
   border-radius: 5px;
@@ -63,9 +63,11 @@ li {
   display: block;
   position: fixed;
   left: 300px;
-  top: 25px;
+  top: 15px;
   box-shadow: 0px 2px 10px #13eaf179;
-  z-index: 1;
+
+  font-size: 1.5em;
+  font-family: "Satisfy", cursive;
 }
 
 /* header */
@@ -214,8 +216,8 @@ li {
 
 .grid_main .icon-cards {
   display: block;
-  width: 100px;
-  height: 28px;
+  width: 130px;
+  height: 30px;
   margin: 0 auto;
 }
 .grid_main button {
@@ -305,6 +307,13 @@ footer.services {
 }
 .logo p {
   text-align: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: blue;
+  }
 }
 /* Copyright */
 
