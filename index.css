@@ -337,7 +337,7 @@ footer.services {
   color: #1ae0ec;
   font: normal normal normal 20px/29px Heebo;
 }
-
+/* Media */
 @media screen and (max-width: 390px) {
   body {
     overflow-x: hidden;
@@ -360,17 +360,17 @@ footer.services {
   /* Hamburger */
 
   .hamburger {
-    color: #1ae0ec;
-    font-size: 20px;
     display: block;
+    color: #1ae0ec;
+    font-size: 0.9em;
     position: fixed;
     right: 20px;
     top: 15px;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
   }
 
-  .hamburger:hover ~ .nav-list {
+  .nav-list {
     display: block;
     width: 100%;
     background-color: #fff;
