@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Satisfy&display=swap");
 
 * {
   padding: 0;
@@ -234,6 +235,85 @@ li {
   text-align: center;
   color: #2c2c2c;
 }
+
+/* JavaScript Projects */
+.js_countainer {
+  width: 100%;
+  height: 120vh;
+  background: #27282c;
+  padding-top: 100px;
+}
+.grid_ScriptProject {
+  width: 70%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 50px auto;
+  gap: 10px;
+}
+.card,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+  background-color: #27282c;
+}
+
+.js_project {
+  width: 20vw;
+  padding-bottom: 4em;
+  border-radius: 10px;
+  border: solid 0.2em rgb(165, 165, 38);
+  box-shadow: 3px 3px 15px #00000029;
+  background: #27282c;
+  text-align: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.js_project:hover {
+  transform: rotateY(180deg);
+}
+
+.js_project .card-back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.js_project h2 {
+  font-family: "Poppins";
+  -webkit-text-stroke: 0.255vw rgb(165, 165, 38);
+  font-size: 3.6rem;
+  padding: 37px 0 21px 0;
+  color: #27282c;
+}
+.js_project p {
+  font-size: 1rem;
+  color: #3a3a3a;
+  text-align: center;
+  padding: 0 2em;
+  margin-bottom: 20px;
+}
+
+.js_project button {
+  width: 10em;
+  height: 1.9em;
+  border: none;
+  font: normal normal bold 16px/26px Heebo;
+  border-radius: 15px;
+  background: #1ae0ec 0% 0% no-repeat padding-box;
+  margin-top: 2.188em;
+}
+.js_project a {
+  text-decoration: none;
+  text-align: center;
+  color: #2c2c2c;
+}
+
 /* Form */
 div#contact.container_form {
   width: 100%;
@@ -377,7 +457,7 @@ footer.services {
     border: solid 1px #65f7fc63;
     position: relative;
     left: 300px;
-    top: 46px;
+    top: 45.1px;
   }
 
   .nav-list li {

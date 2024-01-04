@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -123,31 +123,106 @@
             </div>
         </div>
     </main>
+    <!-- JavaScript Project -->
+    <div class="js_countainer">
+        <div class="main_text">
+            <h3>Selected works</h3>
+            <p>These are all The Projects That Show My Skills in The HTML CSS Languages and The Bootstrap and Sass
+                library </p>
+        </div>
+        <div class="grid_ScriptProject">
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project1</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank"></a></button>
 
+                </div>
+                <div class="card-back">
+                    <!-- Content for the back of the card (if needed) -->
+                </div>
+            </div>
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project2</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank"></a></button>
+                </div>
+                <div class="card-back">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project3</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank">click</a></button>
+
+                </div>
+                <div class="card-back">
+                    <!-- Content for the back of the card (if needed) -->
+                </div>
+            </div>
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project4</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank"></a></button>
+
+                </div>
+                <div class="card-back">
+                    <!-- Content for the back of the card (if needed) -->
+                </div>
+            </div>
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project5</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank"></a></button>
+
+                </div>
+                <div class="card-back">
+                    <!-- Content for the back of the card (if needed) -->
+                </div>
+            </div>
+            <div class="js_project">
+                <div class="card">
+                    <h2>Project6</h2>
+                    <img src="" alt="">
+                    <button><a href="" target="_blank"></a></button>
+
+                </div>
+                <div class="card-back">
+                    <!-- Content for the back of the card (if needed) -->
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Form -->
 
     <div id="contact" class="container_form">
         <div class="image-container">
             <img src="images/envelopeForm.png" alt="">
         </div>
-        <form class="form">
+        <form id="myForm" name="myForm" class="form">
             <label class="h3">Contact us</label>
 
             <label class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, suscipit
                 tempore.</label>
 
             <label class="singel-label">Full Name</label>
-            <input class="h_input" type="text">
+            <input id="fname" name="fname" class="h_input" type="text">
 
             <label class="singel-label">E-mail</label>
-            <input class="h_input" type="email">
+            <input class="h_input" name="email" id="email" type="email">
+
             <label class="singel-label">Phone Number</label>
-            <input class="h_input" type="tel">
+            <input class="h_input" id="phone" type="tel" name="phone">
 
             <label class="singel-label">Content Of The Message (You Have 150 Letters To Write)</label>
             <textarea name="" id="" maxlength="150"></textarea>
 
-            <input class="btn" type="button" value="Send">
+            <input id="sendBtn" class="btn" type="submit" value="Send">
         </form>
     </div>
 
