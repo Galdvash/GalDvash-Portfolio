@@ -1,13 +1,15 @@
 //function Nav display
-function myFunction() {
+const myFunction = () => {
   let x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
   }
-}
-//Requierd Input
+};
+
+document.querySelector(".hamburger").addEventListener("click", myFunction);
+//Requierd
 const myForm = document.getElementById("myForm");
 
 if (myForm) {

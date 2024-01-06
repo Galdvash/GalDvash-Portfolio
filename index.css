@@ -117,6 +117,45 @@ li {
   flex-direction: column;
   margin-top: 7.5em;
 }
+.span_aboutMe {
+  font-size: 1.5em;
+  margin: 1em 0px 1em 0px;
+}
+.span_aboutMe::before {
+  content: "FullTack";
+  animation: animate infinite 10s;
+}
+@keyframes animate {
+  5% {
+    content: "FullTack ";
+  }
+  15% {
+    content: "HTML";
+  }
+  20% {
+    content: "CSS";
+  }
+  30% {
+    content: "BootsTrap";
+  }
+  40% {
+    content: "SASS";
+  }
+  50% {
+    content: "JavaScript";
+  }
+  60% {
+    content: "Gal Dvash";
+  }
+
+  75% {
+    content: "Is Here";
+  }
+
+  90% {
+    content: "For You";
+  }
+}
 .profile-img {
   width: 12%;
 }
@@ -237,6 +276,9 @@ li {
 }
 
 /* JavaScript Projects */
+.section {
+  width: 100%;
+}
 .js_countainer {
   width: 100%;
   height: 120vh;
@@ -252,6 +294,7 @@ li {
   margin: 50px auto;
   gap: 10px;
 }
+
 .card,
 .card-back {
   width: 100%;
@@ -261,6 +304,7 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
   background-color: #27282c;
+  border-radius: 15px;
 }
 
 .js_project {
@@ -312,6 +356,12 @@ li {
   text-decoration: none;
   text-align: center;
   color: #2c2c2c;
+}
+/* image */
+.img_one {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 /* Form */
@@ -504,7 +554,33 @@ footer.services {
     border-radius: 15px;
     border: none;
   }
-
+  /* js */
+  .section {
+    height: 130vh;
+  }
+  .js_countainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .grid_ScriptProject {
+    width: 99vw;
+    height: 88vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(0, 1fr);
+    margin: 30px auto;
+    gap: 1px;
+  }
+  .js_project {
+    width: 96%;
+    height: 52%;
+    h2 {
+      font-size: 16px;
+    }
+    button {
+      width: 16px;
+    }
+  }
   /* Main */
 
   .main {
