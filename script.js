@@ -9,6 +9,7 @@ const myFunction = () => {
 };
 
 document.querySelector(".hamburger").addEventListener("click", myFunction);
+
 //Requierd
 const myForm = document.getElementById("myForm");
 

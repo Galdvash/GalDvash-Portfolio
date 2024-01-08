@@ -501,7 +501,6 @@ footer.services {
   }
 
   .nav-list {
-    display: block;
     width: 100%;
     background-color: #fff;
     border: solid 1px #65f7fc63;
@@ -565,7 +564,7 @@ footer.services {
   }
   .grid_ScriptProject {
     width: 99vw;
-    height: 88vh;
+    height: 54vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(0, 1fr);
     margin: 30px auto;
@@ -573,12 +572,12 @@ footer.services {
   }
   .js_project {
     width: 96%;
-    height: 52%;
+    height: 81%;
     h2 {
       font-size: 16px;
     }
     button {
-      width: 16px;
+      width: 20vw;
     }
   }
   /* Main */
