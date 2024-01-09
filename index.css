@@ -572,12 +572,13 @@ footer.services {
   }
   .js_project {
     width: 96%;
-    height: 81%;
+    height: 90%;
     h2 {
-      font-size: 16px;
+      font-size: 1.1rem;
     }
     button {
-      width: 20vw;
+      width: 15svw;
+      height: 2.9svh;
     }
   }
   /* Main */
