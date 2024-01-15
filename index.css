@@ -303,7 +303,7 @@ li {
   backface-visibility: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
-  background-color: #27282c;
+  background-color: #040405;
   border-radius: 15px;
 }
 
@@ -317,9 +317,10 @@ li {
   text-align: center;
   transition: transform 0.7s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-.js_project:hover {
+.js_project.flipped {
   transform: rotateY(180deg);
 }
 

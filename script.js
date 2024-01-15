@@ -8,6 +8,17 @@ const myFunction = () => {
   }
 };
 
+//CardFlip
+document.addEventListener("DOMContentLoaded", function () {
+  const projects = document.querySelectorAll(".js_project");
+
+  projects.forEach((project) => {
+    project.addEventListener("click", function () {
+      this.classList.toggle("flipped");
+    });
+  });
+});
+
 document.querySelector(".hamburger").addEventListener("click", myFunction);
 
 //Requierd
