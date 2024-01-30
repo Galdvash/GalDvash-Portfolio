@@ -1,0 +1,51 @@
+:root {
+  --toUpperCase-charAt0: capitalize;
+  --color: blue;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.bgc-width {
+  width: 100%;
+  height: 20vh;
+  background: darkgray;
+  padding: 1em 2em;
+}
+
+h1 {
+}
+p {
+  text-transform: var(--toUpperCase-charAt0);
+}
+.container-form {
+  display: flex;
+  align-items: end;
+}
+.form-lbl-input {
+  display: flex;
+  flex-direction: column;
+  flex-grow: calc(100% / 20px);
+  margin-right: 1em;
+  margin-top: 2em;
+}
+.form-lbl-input .btn {
+  cursor: pointer;
+}
+.contanier-users {
+  padding: 1em 2em;
+}
+table {
+  /* we can use Collapse to unvisible the borders and not bgc*/
+  border-collapse: collapse;
+  width: 80vw;
+}
+tr {
+  text-align: center;
+  vertical-align: center;
+}
+th {
+  padding: 8px;
+  background-color: antiquewhite;
+}

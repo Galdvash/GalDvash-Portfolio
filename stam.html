@@ -4,51 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide In Effect</title>
     <style>
-        .clickable {
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin: 5px;
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
-        .clicked {
-            background-color: lightblue;
+        .div_logo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon {
+            max-width: 100px;
+            max-height: 100px;
+            margin: 10px;
+            opacity: 0;
+            transform: translateX(-500px);
+            /* Start off-screen to the left */
+            transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+            /* Transitions for smooth movement and opacity */
+        }
+
+        .icon.active {
+            transform: translateX(0);
+            /* Move to the center */
+            opacity: ;
         }
     </style>
-    <title>this in Event Listener Example</title>
 </head>
 
 <body>
+    <div class="div_logo">
 
-    <div class="clickable" name="e" id="element1">Click me (Element 1)</div>
-    <div class="clickable" id="element2">Click me (Element 2)</div>
-    <div class="clickable" id="element3">Click me (Element 3)</div>
+        <img class="icon" src="images/img-HTML.jpg" alt="">
+        <img class="icon" src="images/img-CSS.png" alt="">
+        <img class="icon" src="images/img-Bootstrap.png" alt="">
+        <img class="icon" src="images/img-SASS.png" alt="">
+        <img class="icon" src="images/img-JS.png" alt="">
+        <img class="icon" src="images/img-OOP.png" alt="">
+        <img class="icon icon1" src="images/img-ES6.png" alt="">
+        <img class="icon" src="images/img-TypeScript.png" alt="">
+        <img class="icon" src="images/img-API.png" alt="">
+        <img class="icon" src="images/img-React.png" alt="">
+        <img class="icon" src="images/img-NodeJS.png" alt="">
+
+    </div>
 
     <script>
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     const clickableElements = document.querySelectorAll(".clickable");
-
-        //     clickableElements.forEach((element) => {
-        //         element.addEventListener("click", function () {
-        //             this.classList.toggle("clicked");
-        //             console.log(`Clicked on element with id: ${this.className}`);
-        //         });
-        //     });
-        // });
         document.addEventListener("DOMContentLoaded", function () {
-            const clickableElements = document.querySelectorAll(".clickable");
+            var icons = document.querySelectorAll('.icon');
 
-            clickableElements.forEach((element) => {
-                element.addEventListener("click", function () {
-                    this.classList.toggle("clicked");
-                    console.log(`Clicked on element with classes: ${Array.from(this.classList).join(', ')}`);
-                });
+            icons.forEach(function (icon, index) {
+                setTimeout(function () {
+                    icon.classList.add('active');
+                }, 200 * index);
             });
         });
-
     </script>
-
 </body>
 
 </html>

@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  background: linear-gradient(135deg, #ffcc00, #ff6666);
+  height: 100vh;
+}
+
+.white-Container {
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 50px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 50px;
+}
+.text {
+  margin: 10px 10px;
+  font-size: larger;
+}
+
+.contain-grey {
+  width: 90%;
+  height: 50px;
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px 50px 50px;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.input::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 1.4em;
+}
+.btn {
+  width: 20%;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: orange;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* li creatElement AND Class By JS */
+.ulList {
+  width: 100%;
+  margin-top: 10px;
+  border: solid black 1px;
+  border-radius: 50px;
+  background-color: rgb(207, 207, 207);
+}
+li {
+  width: 80%;
+  margin: 5px auto;
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  background-color: rgb(206, 200, 200);
+  outline: none;
+  border-radius: 50px;
+}
+button {
+  width: 18px;
+  height: 18px;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 136, 0);
+  position: relative;
+  left: 250px;
+  bottom: 35.8px;
+  cursor: pointer;
+}

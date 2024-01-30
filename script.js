@@ -1,3 +1,13 @@
+//icon bar
+document.addEventListener("DOMContentLoaded", function () {
+  let icons = document.querySelectorAll(".icon");
+
+  icons.forEach(function (icon, index) {
+    setTimeout(function () {
+      icon.classList.toggle("active");
+    }, 200 * index);
+  });
+});
 //function Nav display
 const myFunction = () => {
   let x = document.getElementById("myLinks");
@@ -21,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelector(".hamburger").addEventListener("click", myFunction);
 
-//Requierd
+//Requierd Form Inputo
 const myForm = document.getElementById("myForm");
 
 if (myForm) {

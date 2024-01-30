@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="bgc-width">
+        <div class="tittle">
+            <h1>Register</h1>
+            <p id="p">to register in the system, fill in the details </p>
+        </div>
+
+
+        <form class="container-form">
+            <div class="form-lbl-input">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname">
+            </div>
+
+            <div class="form-lbl-input">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname">
+            </div>
+            <div class="form-lbl-input">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email">
+            </div>
+
+            <div class="form-lbl-input">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+            </div>
+
+            <div class="form-lbl-input ">
+                <input id="submitBtn" class="btn" type="submit" value="send">
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Table User -->
+    <div class="contanier-users">
+        <div class="user-text">
+            <h2>List Of Users</h2>
+        </div>
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>E-Mail</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- td-userDetails -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
