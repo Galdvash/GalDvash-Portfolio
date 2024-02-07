@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+}
+.nav_container {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: skyblue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ul_list {
+  display: flex;
+  margin-right: 30px;
+}
+
+.ul_item {
+  padding-left: 20px;
+  list-style: none;
+}

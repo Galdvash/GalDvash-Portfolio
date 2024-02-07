@@ -6,69 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide In Effect</title>
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
 
-        .div_logo {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .icon {
-            max-width: 100px;
-            max-height: 100px;
-            margin: 10px;
-            opacity: 0;
-            transform: translateX(-500px);
-            /* Start off-screen to the left */
-            transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-            /* Transitions for smooth movement and opacity */
-        }
-
-        .icon.active {
-            transform: translateX(0);
-            /* Move to the center */
-            opacity: ;
-        }
     </style>
 </head>
 
 <body>
-    <div class="div_logo">
+    <!-- Timer -->
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stopTimer()">Stop Timer</button>
+    <button onclick="resetTimer()">Reset Timer</button>
+    <div id="timerDisplay">00:00</div>
 
-        <img class="icon" src="images/img-HTML.jpg" alt="">
-        <img class="icon" src="images/img-CSS.png" alt="">
-        <img class="icon" src="images/img-Bootstrap.png" alt="">
-        <img class="icon" src="images/img-SASS.png" alt="">
-        <img class="icon" src="images/img-JS.png" alt="">
-        <img class="icon" src="images/img-OOP.png" alt="">
-        <img class="icon icon1" src="images/img-ES6.png" alt="">
-        <img class="icon" src="images/img-TypeScript.png" alt="">
-        <img class="icon" src="images/img-API.png" alt="">
-        <img class="icon" src="images/img-React.png" alt="">
-        <img class="icon" src="images/img-NodeJS.png" alt="">
+    <!-- Stopwatch -->
+    <button onclick="startStopwatch()">Start Stopwatch</button>
+    <button onclick="stopStopwatch()">Stop Stopwatch</button>
+    <button onclick="resetStopwatch()">Reset Stopwatch</button>
+    <div id="stopwatchDisplay">00:00</div>
 
-    </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var icons = document.querySelectorAll('.icon');
+        // Timer
+        let timerInterval;
+        let startTime = 0;
+        let elapsedTime = 0;
 
-            icons.forEach(function (icon, index) {
-                setTimeout(function () {
-                    icon.classList.add('active');
-                }, 200 * index);
-            });
-        });
+        function startTimer() {
+            if (!timerInterval) {
+                startTime = Date.now() - elapsedTime;
+                timerInterval = setInterval(updateTimerDisplay, 1000);
+            }
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            elapsedTime = Date.now() - startTime;
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            startTime = 0;
+            elapsedTime = 0;
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            const currentTime = Date.now();
+            elapsedTime = currentTime - startTime;
+            const totalSeconds = Math.floor(elapsedTime / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timerDisplay').textContent = formattedTime;
+        }
+
+        // Stopwatch
+        let stopwatchInterval;
+        let stopwatchStartTime = 0;
+        let stopwatchElapsedTime = 0;
+
+        function startStopwatch() {
+            if (!stopwatchInterval) {
+                stopwatchStartTime = Date.now() - stopwatchElapsedTime;
+                stopwatchInterval = setInterval(updateStopwatchDisplay, 1000);
+            }
+        }
+
+        function stopStopwatch() {
+            clearInterval(stopwatchInterval);
+            stopwatchInterval = null;
+            stopwatchElapsedTime = Date.now() - stopwatchStartTime;
+        }
+
+        function resetStopwatch() {
+            clearInterval(stopwatchInterval);
+            stopwatchInterval = null;
+            stopwatchStartTime = 0;
+            stopwatchElapsedTime = 0;
+            updateStopwatchDisplay();
+        }
+
+        function updateStopwatchDisplay() {
+            const currentTime = Date.now();
+            stopwatchElapsedTime = currentTime - stopwatchStartTime;
+            const totalSeconds = Math.floor(stopwatchElapsedTime / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('stopwatchDisplay').textContent = formattedTime;
+        }
+
     </script>
 </body>
 

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.timer_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.timer_screen {
+  width: 30vw;
+  height: 30vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer_screen div {
+  width: 50%;
+  height: 100px;
+  background-color: grey;
+  opacity: 1;
+  font-size: 60px;
+  color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer_buttons {
+  position: absolute; /* Add position absolute */
+  bottom: 150px; /* Adjust the position of the buttons */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timer_buttons button {
+  width: 50px;
+  height: 50px;
+}
