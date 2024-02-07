@@ -44,6 +44,9 @@ li {
   float: right;
   margin-right: 300px;
 }
+.nav-list li {
+  line-height: 2;
+}
 
 .navbar a {
   font-size: 1.5625em;
@@ -54,7 +57,7 @@ li {
 .profile img {
   width: 40px;
   position: fixed;
-  top: 4px;
+  top: 10px;
   left: 200px;
   box-shadow: 0px 2px 10px #13eaf1bd;
   border-radius: 5px;

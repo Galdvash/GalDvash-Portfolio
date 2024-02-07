@@ -8,15 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 200 * index);
   });
 });
+
 //function Nav display
-const myFunction = () => {
-  let x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+btn = document.getElementById("hamburger");
+btn.addEventListener("click", () => {
+  let myLinks = document.getElementById("myLinks");
+  if (myLinks.style.display === "none") {
+    myLinks.classList.toggle("add");
+    myLinks.style.display = "block";
   } else {
-    x.style.display = "block";
+    myLinks.style.display = "none";
   }
-};
+});
 
 //CardFlip
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-document.querySelector(".hamburger").addEventListener("click", myFunction);
 
 //Requierd Form Inputo
 const myForm = document.getElementById("myForm");

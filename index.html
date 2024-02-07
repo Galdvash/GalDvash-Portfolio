@@ -21,37 +21,53 @@
                 <h4>Gal dvash</h4>
             </div>
 
-            <div class="hamburger"><a href="javascript:void(0);">&#9776; </a> </div>
+            <div id="hamburger" class="hamburger"><a href="javascript:void(0);">&#9776; </a> </div>
             <ul id="myLinks" class="nav-list">
                 <li><a href="#main">Main</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li class="dropdown">
+                    <a>Projects</a>
+                    <div class="dropdown-content">
+                        <a href="#">ProjectHtml</a>
+                        <a href="#">JSProject</a>
+                    </div>
+                </li>
                 <li><a href="#contact">ContactUs</a></li>
             </ul>
+
         </nav>
 
         <!-- work_portfolio -->
         <div class="work_portfolio">
+
             <h1>Work Portfolio</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quas tempora reprehenderit
-                eaque.
+            <p>
+                Hello and Welcome to My Work Portfolio <br> I invite you to explore my Full Stack Work Portfolio
             </p>
         </div>
     </header>
 
     <div class="div_logo">
 
-        <img class="icon" src="images/img-HTML.jpg" alt="">
-        <img class="icon" src="images/img-CSS.png" alt="">
-        <img class="icon" src="images/img-Bootstrap.png" alt="">
-        <img class="icon" src="images/img-SASS.png" alt="">
-        <img class="icon" src="images/img-JS.png" alt="">
-        <img class="icon" src="images/img-OOP.png" alt="">
-        <img class="icon icon1" src="images/img-ES6.png" alt="">
-        <img class="icon" src="images/img-TypeScript.png" alt="">
-        <img class="icon" src="images/img-API.png" alt="">
-        <img class="icon" src="images/img-React.png" alt="">
-        <img class="icon" src="images/img-NodeJS.png" alt="">
+        <a target="blank"
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"><img
+                class="icon" src="images/icon_bar/Html_icon.png" alt=""></a>
+        <a target="blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"><img
+                class="icon" src="images/icon_bar/Css_icon.png" alt=""></a>
+        <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img class="icon"
+                src="images/icon_bar/JavaScript_icon.png" alt=""></a>
+        <a target="blank" href="https://getbootstrap.com/"><img class="icon" src="images/icon_bar/BootsTrap.png"
+                alt=""></a>
+        <a target="blank" href="https://sass-lang.com/"> <img class="icon" src="images/icon_bar/Sass_icon.png"
+                alt=""></a>
+        <a target="blank" href="https://www.typescriptlang.org/"><img class="icon"
+                src="images/icon_bar/TypeScript_icon.png" alt=""></a>
+        <a target="blank" href="https://www.redhat.com/en/topics/api/what-is-a-rest-api"> <img class="icon icon1 "
+                src="images/icon_bar/API_icon.png" alt=""></a>
+        <a target="blank" href="https://react.dev/"> <img class="icon" src="images/icon_bar/React_icon.png" alt=""></a>
+        <a target="blank" href="https://nodejs.org/en"><img class="icon" src="images/icon_bar/NodeJs_icon.png"
+                alt=""></a>
+
         <li id="about"></li>
 
     </div>
@@ -59,7 +75,11 @@
     <div class="about_me">
         <img class="profile-img" src="images/profile-image.png" alt="profileimg"><br>
         <h1 class="about-title">About Me </h1>
-        <span class="span_aboutMe"></span>
+        <div class="container-Text">
+            <span class="fText text">I am</span>
+            <span class="secText text">Developer</span>
+
+        </div>
         <p class="about-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolores? Quod
             similique
             ullam quo quos
@@ -83,44 +103,43 @@
         <div class="grid_main">
             <div class="item">
                 <img id="top_img" src="images/Project1.png" alt="">
-                <h4>Here & Now</h4>
+                <h6>Here & Now</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/CSS+HTML.png" alt="">
+
                 <button><a target="_blank" href="HomeProject1.html">Click &#x00BB; </a></button>
             </div>
             <div class="item ">
                 <img id="top_img" src="images/Project2.png" alt="">
-                <h4>Coffe Coupon</h4>
+                <h6>Coffe Coupon</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/bootstrap+html.png" alt="">
+
                 <button><a target="_blank" href="Homeproject2.html">Click &#x00BB;</a></button>
             </div>
             <div class="item ">
                 <img id="top_img" src="images/Project3.png" alt="">
-                <h4>Let Us Lead You</h4>
+                <h6>Let Us Lead You</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/CSS+HTML.png" alt="">
+
                 <button><a target="_blank" href="HomeProject3.html">Click &#x00BB;</a></button>
             </div>
             <div class="item ">
                 <img id="top_img" src="images/Project4.png" alt="">
-                <h4>Free Consultation</h4>
+                <h6>Free Consultation</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/CSS+HTML.png" alt="">
+
                 <button><a target="_blank" href="HomeProject4.html">Click &#x00BB;</a></button>
             </div>
             <div class="item ">
                 <img id="top_img" src="images/Project5.png" alt="">
-                <h4>Project Name</h4>
+                <h6>Project Name</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/CSS+HTML.png" alt="">
+
                 <button><a target="_blank" href="HomeProject5.html">Click &#x00BB;</a></button>
             </div>
             <div class="item ">
                 <img id="top_img" src="images/Project6.png" alt="">
-                <h4>Discover a World</h4>
+                <h6>Discover a World</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.</p>
-                <img class="icon-cards" src="images/CSS+HTML.png" alt="">
                 <button><a target="_blank" href="HomeProject6.html">Click &#x00BB;</a></button>
             </div>
         </div>
@@ -198,15 +217,17 @@
 
                     </div>
                     <div class="card-back">
-                        <!-- Content for the back of the card (if needed) -->
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Form -->
 
-    <div id="contact" class="container_form">
+    </section>
+
+    <!-- Form -->
+    <div id="contact"></div>
+    <div class="container_form">
         <div class="image-container">
             <img src="images/envelopeForm.png" alt="">
         </div>
