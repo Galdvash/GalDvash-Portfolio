@@ -532,7 +532,6 @@
 
   .grid_ScriptProject {
     width: 100%;
-
     grid-template-columns: repeat(1, 1fr);
   }
   .js_project {
@@ -550,7 +549,7 @@
   }
   /* Media Form */
   .container_form {
-    width: 110%;
+    width: 100%;
   }
 
   .form {
