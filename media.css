@@ -231,6 +231,9 @@
 }
 /* @Media 495px */
 @media screen and (max-width: 495px) {
+  .header {
+    overflow: auto;
+  }
   .work_portfolio h1 {
     font-size: 3rem;
     top: 11rem;
