@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="media.css">
     <script defer src="script.js"></script>
 </head>
 
@@ -25,13 +25,13 @@
             <ul id="myLinks" class="nav-list">
                 <li><a href="#main">Main</a></li>
                 <li><a href="#about">About</a></li>
-                <li class="dropdown">
-                    <a>Projects</a>
-                    <div class="dropdown-content">
-                        <a href="#">ProjectHtml</a>
-                        <a href="#">JSProject</a>
-                    </div>
-                </li>
+                <ul class="dropdown">
+                    <li><a>Projects</a></li>
+                    <ul class="dropdown-content">
+                        <li><a href="#projectHtml">ProjectHtml</a></li>
+                        <li><a href="#projectJavaScript">JSProject</a></li>
+                    </ul>
+                </ul>
                 <li><a href="#contact">ContactUs</a></li>
             </ul>
 
@@ -76,8 +76,8 @@
         <img class="profile-img" src="images/profile-image.png" alt="profileimg"><br>
         <h1 class="about-title">About Me </h1>
         <div class="container-Text">
-            <span class="fText text">I am</span>
-            <span class="secText text">Developer</span>
+            <span class="fText text">I am</span><br>
+            <span class="secText text"></span>
 
         </div>
         <p class="about-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dolores? Quod
@@ -94,7 +94,7 @@
 
     </div>
 
-    <main id="projects" class="main">
+    <main id="projectHtml" class="main">
         <div class="main_text">
             <h3>Selected works</h3>
             <p>These are all The Projects That Show My Skills in The HTML CSS Languages and The Bootstrap and Sass
@@ -145,10 +145,10 @@
         </div>
     </main>
     <!-- JavaScript Project -->
-    <section class="section">
+    <section id="projectJavaScript" class="section">
         <div class="js_countainer">
             <!-- main_text CSS like the main_text in HTMLprojects -->
-            <div class="main_text">
+            <div class="main_textjs">
                 <h3>Selected works</h3>
                 <p>These are all The Projects That Show My Skills in The HTML CSS Languages and The Bootstrap and Sass
                     library </p>
@@ -160,6 +160,8 @@
                     </div>
                     <div class="card-back">
                         <h2>Project1</h2>
+                        <P style="color: aliceblue;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non,
+                            ipsum.</P>
                         <img src="" alt="">
                         <button><a href="" target="_blank"></a></button>
 
@@ -184,7 +186,6 @@
 
                     </div>
                     <div class="card-back">
-                        <!-- Content for the back of the card (if needed) -->
                     </div>
                 </div>
                 <div class="js_project">
@@ -195,7 +196,6 @@
 
                     </div>
                     <div class="card-back">
-                        <!-- Content for the back of the card (if needed) -->
                     </div>
                 </div>
                 <div class="js_project">
@@ -206,7 +206,6 @@
 
                     </div>
                     <div class="card-back">
-                        <!-- Content for the back of the card (if needed) -->
                     </div>
                 </div>
                 <div class="js_project">
@@ -222,7 +221,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- Form -->

@@ -1,3 +1,15 @@
+// change I AM secText
+let secTextElement = document.querySelector(".secText");
+let replacementWords = ["Full Stack Developer", "Designer", "Believe My Work"];
+let currentIndex = 0;
+
+function changeText() {
+  secTextElement.textContent = replacementWords[currentIndex];
+  currentIndex = (currentIndex + 1) % replacementWords.length;
+}
+
+setInterval(changeText, 1000);
+
 //icon bar
 document.addEventListener("DOMContentLoaded", function () {
   let icons = document.querySelectorAll(".icon");
@@ -10,16 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //function Nav display
-btn = document.getElementById("hamburger");
-btn.addEventListener("click", () => {
-  let myLinks = document.getElementById("myLinks");
-  if (myLinks.style.display === "none") {
-    myLinks.classList.toggle("add");
-    myLinks.style.display = "block";
-  } else {
-    myLinks.style.display = "none";
-  }
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector(".nav-list").classList.toggle("active");
 });
+
+// Function open Projects Links
+document
+  .querySelector(".dropdown > li > a")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    document.querySelector(".dropdown-content").classList.toggle("active");
+  });
 
 //CardFlip
 document.addEventListener("DOMContentLoaded", function () {
