@@ -7,6 +7,9 @@
   .header {
     width: 100%;
     height: 31em;
+    overflow: auto;
+  }
+  .navbar {
   }
 
   .profile h4 {
@@ -80,6 +83,7 @@
     height: 100%;
     position: relative;
     background-image: url(bgc_WorkProtfolio.png);
+    overflow-x: hidden;
 
     font-family: Poppins;
   }
@@ -316,7 +320,7 @@
 /* Media 390px*/
 @media screen and (max-width: 390px) {
   body {
-    overflow-x: hidden;
+    overflow: auto;
   }
   .header {
     width: 100vw;
