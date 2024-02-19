@@ -1,36 +1,3 @@
-// document.querySelector("#search").addEventListener("click", getPokemon);
-
-// function FirstLetter(string) {
-//   return string.charAt(0).toUpperCase() + string.slice(1);
-// }
-
-// function lowerCaseName(string) {
-//   return string.toLowerCase();
-// }
-
-// function getPokemon(e) {
-//   const name = document.querySelector("#pokemonName").value;
-//   const pokemonName = lowerCaseName(name);
-
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       document.querySelector(".pokemonBox").innerHTML = `
-//         <div>
-//         <img src="${data.sprites.other["official-artwork"].front_default}"
-//             alt="${FirstLetter(data.name)}">
-//     </div>
-//     <div class="pokemonInfo">
-//         <h1>"${FirstLetter(data.name)}"</h1>
-//         <p>Weight:"${data.weight}"</p>
-//         `;
-//     })
-//     .catch((err) => {
-//       console.log("pokemon not find", err);
-//     });
-
-//   e.preventDefault();
-// }
 document.querySelector("#search").addEventListener("click", getPokemon);
 
 document
@@ -93,6 +60,12 @@ function getPokemon(e) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then((response) => response.json())
     .then((data) => {
+      // Get types of the Pokémon
+      const types = data.types.map((type) => type.type.name);
+
+      // Create a string to display types
+      const typesString = types.join(", ");
+
       document.querySelector(".pokemonBox").innerHTML = `
         <div>
           <img src="${
@@ -101,8 +74,11 @@ function getPokemon(e) {
         </div>
         <div class="pokemonInfo">
           <h1>"${FirstLetter(data.name)}"</h1>
-          <p>Weight:"${data.weight}"</p>
-        `;
+          <p>Types: ${typesString}</p>
+          <p>Weight: ${data.weight}</p>
+          <p>Height: ${data.height}</p>
+        </div>
+      `;
     })
     .catch((err) => {
       console.log("Pokemon not found", err);

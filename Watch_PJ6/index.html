@@ -6,26 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script defer src="script2.js"></script>
+    <script defer src="script3.js"></script>
+    <script defer src="globalScript.js"></script>
     <link rel="stylesheet" href="globalStyle.css">
 </head>
 
 <body>
-    <nav class="nav_container">
-        <ul class="ul_list">
-            <li class="ul_item"><a href="index.html">Timer</a></li>
-            <li class="ul_item"><a href="index2.html">Time Zone</a></li>
-            <li class="ul_item"><a href="index3.html">Missions</a></li>
-        </ul>
-    </nav>
-
-    <div class="timer_container">
-        <div class="timer_screen">
-            <div class="timer">--:--</div>
+    <div class="iphone_Container">
+        <nav class="nav_container">
+            <ul class="ul_list">
+                <li class="list_item">
+                    <img src="imagesWatch/countdown_counter_period_stopwatch_timer_icon.png" class="ul_Icon">
+                    </img>
+                    <p>Timer</p>
+                </li>
+                <li class="list_item">
+                    <img src="imagesWatch/stop_watch_icon.png" class="ul_Icon iconTwo">
+                    </img>
+                    <p>Stop Watch</p>
+                </li>
+                <li class="list_item">
+                    <img src="imagesWatch/earth_global_globe_internet_network_icon.png" class="ul_Icon"></img>
+                    <p>World Clock</p>
+                </li>
+            </ul>
+        </nav>
+        <div class="timer">
+            <p class="output">--:--</p>
         </div>
-        <div class="timer_buttons">
-            <button class="btn_start">START</button>
-            <button class="btn_stop">STOP</button>
+        <div class="timer_container">
+            <h3>Countdown</h3>
+            <hr>
+
+            <div class="timer_buttons">
+                <button class="btn_start">START</button>
+                <button class="btn_restart">RESTART</button>
+                <button class="btn_delete">STOP</button>
+            </div>
+            <div>
+                <input type="number" id="inputMin" placeholder="Add Min">
+                <input type="number" id="inputSec" placeholder="Add Sec">
+            </div>
+        </div>
+
+        <div class="world_Watch">
+
+        </div>
+
+        <div class="stop_Watch">
+            <div class="stopWatch_buttons">
+                <button class="btn_start">START</button>
+                <button class="btn_stop">STOP</button>
+            </div>
         </div>
     </div>
 </body>

@@ -3,7 +3,8 @@ body {
   font-family: "Righteous", cursive;
   padding: 0;
   margin: 0;
-  background-color: #666;
+  background: linear-gradient(180deg, red, green, yellow, blue);
+  height: 100vh;
 }
 .container {
   width: 400px;
@@ -13,7 +14,7 @@ body {
   text-align: center;
   font-size: 78px;
   padding: 0.2em 0 0 0;
-  margin: 0;
+  margin: 22px;
 }
 .pad.red {
   left: 15px;
@@ -60,7 +61,7 @@ body {
   width: 400px;
   height: 400px;
   background: #000;
-  margin: 20px;
+  margin: 110px auto;
   background: rgb(0, 0, 0);
 }
 .simon::before {

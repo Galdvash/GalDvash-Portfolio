@@ -1,56 +1,117 @@
-const btnCreat = document.getElementById("creat");
-const btnDelete = document.getElementById("btnDelete");
-const canvas = document.getElementById("canvas");
+class CanvasElement {
+  constructor(
+    element,
+    color,
+    bgColor,
+    width,
+    height,
+    marginLeft,
+    marginRight,
+    text
+  ) {
+    this.element = element;
+    this.color = color;
+    this.bgColor = bgColor;
+    this.width = width;
+    this.height = height;
+    this.marginLeft = marginLeft;
+    this.marginRight = marginRight;
+    this.text = text;
+  }
 
-// Retrieve stored elements from localStorage
-let storedElements = JSON.parse(localStorage.getItem("item")) || [];
-function callback() {
+  createElement() {
+    let element = document.createElement(this.element);
+    element.style.marginTop = "10px";
+    element.style.color = this.color;
+    element.style.backgroundColor = this.bgColor;
+    element.style.width = this.width + "px";
+    element.style.height = this.height + "px";
+    element.style.marginLeft = this.marginLeft + "px";
+    element.style.marginRight = this.marginRight + "px";
+    element.textContent = this.text;
+    return element;
+  }
+}
+
+class Canvas {
+  constructor() {
+    this.canvas = document.getElementById("canvas");
+    this.storedElements = JSON.parse(localStorage.getItem("item")) || [];
+  }
+
+  addElement(canvasElement) {
+    let element = canvasElement.createElement();
+    this.canvas.appendChild(element);
+    this.storedElements.push(canvasElement);
+    this.updateLocalStorage();
+  }
+
+  deleteElement() {
+    let deleteElement = this.canvas.lastChild;
+    if (deleteElement) {
+      this.canvas.removeChild(deleteElement);
+      this.storedElements.pop();
+      this.updateLocalStorage();
+    }
+  }
+
+  updateLocalStorage() {
+    localStorage.setItem("item", JSON.stringify(this.storedElements));
+  }
+
+  loadStoredElements() {
+    this.storedElements.forEach((elements) => {
+      let canvasElement = new CanvasElement(
+        elements.element,
+        elements.color,
+        elements.bgColor,
+        elements.width,
+        elements.height,
+        elements.marginLeft,
+        elements.marginRight,
+        elements.text
+      );
+      let element = canvasElement.createElement();
+      this.canvas.appendChild(element);
+    });
+  }
+}
+
+const canvas = new Canvas();
+
+const btnCreate = document.getElementById("create");
+const btnDelete = document.getElementById("btnDelete");
+
+btnCreate.addEventListener("click", () => {
   let elements = {
     element: document.getElementById("element").value,
     color: document.getElementById("color").value,
     bgColor: document.getElementById("bgColor").value,
     width: parseInt(document.getElementById("width").value),
     height: parseInt(document.getElementById("height").value),
-    margin_left: parseInt(document.getElementById("margin-left").value),
-    margin_right: parseInt(document.getElementById("margin-right").value),
+    marginLeft: parseInt(document.getElementById("margin-left").value),
+    marginRight: parseInt(document.getElementById("margin-right").value),
     text: document.getElementById("text").value,
   };
 
-  let element = document.createElement(elements.element);
-  element.style.marginTop = "10px";
-  element.style.color = elements.color;
-  element.style.backgroundColor = elements.bgColor;
-  element.style.width = elements.width + "px";
-  element.style.height = elements.height + "px";
-  element.style.marginLeft = elements.margin_left + "px";
-  element.style.marginRight = elements.margin_right + "px";
-  element.textContent = elements.text;
+  let canvasElement = new CanvasElement(
+    elements.element,
+    elements.color,
+    elements.bgColor,
+    elements.width,
+    elements.height,
+    elements.marginLeft,
+    elements.marginRight,
+    elements.text
+  );
 
-  canvas.appendChild(element);
-  // Save elements to localStorage
-  storedElements.push(elements);
-  localStorage.setItem("item", JSON.stringify(storedElements));
-}
-btnCreat.addEventListener("click", callback);
+  canvas.addElement(canvasElement);
+});
 
 btnDelete.addEventListener("click", () => {
-  let deletElement = canvas.lastChild;
-  if (deletElement) {
-    canvas.removeChild(deletElement);
-    storedElements.pop(); //pop remove the last element in the array
-    localStorage.setItem("item", JSON.stringify(storedElements));
-  }
+  canvas.deleteElement();
 });
 
 window.onload = function () {
-  storedElements.forEach(function (elements) {
-    let element = document.createElement(elements.element);
-    element.style.color = elements.color;
-    element.style.backgroundColor = elements.bgColor;
-    element.style.width = elements.width + "px";
-    element.style.height = elements.height + "px";
-    element.style.marginLeft = elements.margin_left + "px";
-    element.innerHTML = elements.text;
-    canvas.appendChild(element);
-  });
+  canvas.loadStoredElements();
 };

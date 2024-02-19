@@ -11,91 +11,25 @@
 </head>
 
 <body>
-    <!-- Timer -->
-    <button onclick="startTimer()">Start Timer</button>
-    <button onclick="stopTimer()">Stop Timer</button>
-    <button onclick="resetTimer()">Reset Timer</button>
-    <div id="timerDisplay">00:00</div>
-
-    <!-- Stopwatch -->
-    <button onclick="startStopwatch()">Start Stopwatch</button>
-    <button onclick="stopStopwatch()">Stop Stopwatch</button>
-    <button onclick="resetStopwatch()">Reset Stopwatch</button>
-    <div id="stopwatchDisplay">00:00</div>
-
+    <input id="input" type="text">
+    <h1 id="printText"></h1>
+    <button id="button">Click</button>
 
     <script>
-        // Timer
-        let timerInterval;
-        let startTime = 0;
-        let elapsedTime = 0;
+        let input = document.getElementById('input')
+        let printText = document.getElementById('printText');
+        let button = document.getElementById('button');
+        let age = 10;
 
-        function startTimer() {
-            if (!timerInterval) {
-                startTime = Date.now() - elapsedTime;
-                timerInterval = setInterval(updateTimerDisplay, 1000);
+
+        button.addEventListener('click', () => {
+            if (Number(input.value)) {
+                printText.textContent = Number(input.value);
+            } else {
+                printText.textContent = "Not A Number"
             }
-        }
+        })
 
-        function stopTimer() {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            elapsedTime = Date.now() - startTime;
-        }
-
-        function resetTimer() {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            startTime = 0;
-            elapsedTime = 0;
-            updateTimerDisplay();
-        }
-
-        function updateTimerDisplay() {
-            const currentTime = Date.now();
-            elapsedTime = currentTime - startTime;
-            const totalSeconds = Math.floor(elapsedTime / 1000);
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            document.getElementById('timerDisplay').textContent = formattedTime;
-        }
-
-        // Stopwatch
-        let stopwatchInterval;
-        let stopwatchStartTime = 0;
-        let stopwatchElapsedTime = 0;
-
-        function startStopwatch() {
-            if (!stopwatchInterval) {
-                stopwatchStartTime = Date.now() - stopwatchElapsedTime;
-                stopwatchInterval = setInterval(updateStopwatchDisplay, 1000);
-            }
-        }
-
-        function stopStopwatch() {
-            clearInterval(stopwatchInterval);
-            stopwatchInterval = null;
-            stopwatchElapsedTime = Date.now() - stopwatchStartTime;
-        }
-
-        function resetStopwatch() {
-            clearInterval(stopwatchInterval);
-            stopwatchInterval = null;
-            stopwatchStartTime = 0;
-            stopwatchElapsedTime = 0;
-            updateStopwatchDisplay();
-        }
-
-        function updateStopwatchDisplay() {
-            const currentTime = Date.now();
-            stopwatchElapsedTime = currentTime - stopwatchStartTime;
-            const totalSeconds = Math.floor(stopwatchElapsedTime / 1000);
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            document.getElementById('stopwatchDisplay').textContent = formattedTime;
-        }
 
     </script>
 </body>

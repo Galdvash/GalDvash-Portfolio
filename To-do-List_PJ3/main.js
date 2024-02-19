@@ -1,49 +1,44 @@
 const addButton = document.getElementById("btn-add");
-const outPutList = document.getElementById("outPutText");
+const outPutList = document.getElementById("outPutList");
 const input = document.getElementById("input-text");
 
-// Event listener for the "keyup" event on the input field
+// Load saved data from localStorage
+window.onload = function () {
+  const savedData = localStorage.getItem("todoList");
+  if (savedData) {
+    outPutList.innerHTML = savedData;
+    addClickListeners();
+  }
+};
+
 input.addEventListener("keyup", (event) => {
-  // Check if the Enter key is pressed (key code 13)
   if (event.key === "Enter") {
-    // Trigger the same functionality as addButton click
     handleAddButtonClick();
   }
 });
 
-// Event listener for the addButton click
 addButton.addEventListener("click", handleAddButtonClick);
 
 function handleAddButtonClick() {
   const inputValue = input.value.trim();
 
-  if (input && inputValue !== "") {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = inputValue;
-    listItem.classList = "li";
+  if (inputValue !== "") {
+    const item = document.createElement("li");
+    item.innerHTML = inputValue;
+    outPutList.appendChild(item);
 
-    // Insert the new list item as the first child of outPutList
-    outPutList.insertBefore(listItem, outPutList.firstChild);
+    const span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    item.appendChild(span);
 
-    listItem.addEventListener("click", () => {
-      listItem.style.textDecoration = "line-through";
-    });
+    if (outPutList.firstChild) {
+      outPutList.insertBefore(item, outPutList.firstChild);
+    } else {
+      outPutList.appendChild(item);
+    }
 
-    const deleteLineBtn = document.createElement("button");
-    deleteLineBtn.innerHTML = "\u00d7";
-    deleteLineBtn.classList = "deleteLineBtn";
-
-    // Insert the delete button as the second child of outPutList
-    outPutList.insertBefore(deleteLineBtn, outPutList.firstChild.nextSibling);
-
-    deleteLineBtn.addEventListener("click", () => {
-      outPutList.removeChild(listItem);
-      outPutList.removeChild(deleteLineBtn);
-    });
-
-    // Add the item to localStorage
-    saveItemToLocalStorage(inputValue);
-
+    addClickListeners();
+    saveData();
     clearText();
   }
 }
@@ -52,49 +47,25 @@ function clearText() {
   input.value = "";
 }
 
-// Function to load stored items from localStorage
-function loadStoredItems() {
-  // Retrieve the stored items from localStorage
-  const storedItems = JSON.parse(localStorage.getItem("myItems")) || [];
-
-  // Create UI elements based on the stored items
-  storedItems.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = item;
-    listItem.classList = "li";
-
-    // Insert the stored list item as the first child of outPutList
-    outPutList.insertBefore(listItem, outPutList.firstChild);
-
-    listItem.addEventListener("click", () => {
-      listItem.style.textDecoration = "line-through";
-    });
-
-    const deleteLineBtn = document.createElement("button");
-    deleteLineBtn.innerHTML = "\u00d7";
-    deleteLineBtn.classList = "deleteLineBtn";
-
-    // Insert the delete button as the second child of outPutList
-    outPutList.insertBefore(deleteLineBtn, outPutList.firstChild.nextSibling);
-
-    deleteLineBtn.addEventListener("click", () => {
-      outPutList.removeChild(listItem);
-      outPutList.removeChild(deleteLineBtn);
-    });
+function addClickListeners() {
+  const listItems = outPutList.querySelectorAll("li");
+  listItems.forEach((item) => {
+    item.addEventListener("click", handleItemClick);
   });
 }
 
-// Function to save an item to localStorage
-function saveItemToLocalStorage(value) {
-  // Retrieve the existing items from localStorage
-  const storedItems = JSON.parse(localStorage.getItem("myItems")) || [];
-
-  // Add the new item
-  storedItems.push(value);
-
-  // Save the updated items to localStorage
-  localStorage.setItem("myItems", JSON.stringify(storedItems));
+function handleItemClick(event) {
+  const target = event.target;
+  if (target.tagName === "LI") {
+    target.classList.toggle("clicked");
+    saveData();
+  } else if (target.tagName === "SPAN") {
+    target.classList.toggle("clicked");
+    target.parentElement.remove();
+    saveData();
+  }
 }
 
-// Load stored items from localStorage
-loadStoredItems();
+function saveData() {
+  localStorage.setItem("todoList", outPutList.innerHTML);
+}
