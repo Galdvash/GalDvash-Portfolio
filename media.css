@@ -108,6 +108,9 @@
     width: 100%;
     font-size: 5rem;
   }
+  .about_me {
+    padding-top: 5rem;
+  }
   /* JS PROJECTS */
   .grid_ScriptProject {
     width: 70vw;
@@ -182,7 +185,8 @@
   }
   /* FORM */
   .container_form {
-    height: 60vh;
+    height: 80vh;
+    padding-top: 7rem;
   }
 
   .form {
@@ -235,13 +239,15 @@
     margin-left: 1em;
     margin-right: 1em;
   }
+  .about-text {
+    width: 100%;
+    line-height: 1.2;
+  }
   /* HTML Projects */
   .profile-img {
     width: 20%;
   }
-  .about-text {
-    width: 97%;
-  }
+
   .grid_main {
     width: 82vw;
     grid-template-columns: repeat(2, 1fr);
@@ -380,7 +386,7 @@
   }
   /* JS PROJECTS */
   .section {
-    height: 175vh;
+    height: 270vh;
   }
 
   .js_countainer {
@@ -396,7 +402,7 @@
 
   .js_project {
     width: 68vw;
-    height: 28vh;
+    height: 40vh;
   }
 
   .js_project h2 {
@@ -410,7 +416,7 @@
   /* Form */
   .container_form {
     width: 100%;
-    height: 90vh;
+    padding-bottom: 7rem;
   }
   .form {
     padding-bottom: 1rem;
@@ -608,12 +614,12 @@
   /* js */
   .section {
     width: 100%;
-    height: 308vh;
+    height: 335vh;
     background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
   }
   .js_countainer {
     width: 100%;
-    height: 90%;
+
     padding-top: 0.5em;
     display: flex;
     flex-direction: column;
@@ -645,24 +651,86 @@
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .card,
+  .card-back {
+    max-width: 100%; /* הוספת קביעת גובה מרבי */
+    max-height: 100%; /* הוספת קביעת רוחב מרבי */
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    background-color: #040405;
+    border-radius: 7px; /* עיגול קצוות */
+  }
+
   .js_project {
     width: 80%;
-    height: 35vh;
-    margin-top: 50px;
-    margin-left: 2.55em;
+    height: auto;
+    padding-bottom: 4em;
+    margin-left: 2.5rem;
+    border-radius: 10px;
+    border: solid 0.2em rgb(165, 165, 38);
+    box-shadow: 3px 3px 15px #00000029;
+    background: #27282c;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .js_project.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .js_project .card-back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
   }
 
   .js_project h2 {
-    font-size: 1.1rem;
+    font-family: "Poppins";
+    -webkit-text-stroke: 0.255vw rgb(165, 165, 38);
+    font-size: 2rem;
+    color: #27282c;
+  }
+  .explaine {
+    font-size: 1rem;
   }
   .js_project button {
-    width: 5.5em;
+    width: 10em;
+    height: 1.9em;
+    border: none;
+    font: normal normal bold 16px/26px Heebo;
+    border-radius: 15px;
+    background: #1ae0ec 0% 0% no-repeat padding-box;
+    margin-top: 1.188em;
   }
+
+  .js_project a {
+    text-decoration: none;
+  }
+  .close {
+    color: #aaa;
+
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    bottom: 15px;
+    left: 6rem;
+    cursor: pointer;
+  }
+  #downloadButton,
+  #showButton {
+    cursor: pointer;
+    width: 50%;
+  }
+
   /* Media Form */
   .container_form {
     width: 100%;
-    height: 73vh;
-    padding-top: 1rem;
+    height: 90vh;
+    padding-top: 9rem;
   }
 
   .form {

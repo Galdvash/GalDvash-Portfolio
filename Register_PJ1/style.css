@@ -144,5 +144,100 @@ th {
   padding: 8px;
   background-color: antiquewhite;
 }
-tbody {
+
+@media screen and (max-width: 1665px) {
+  .border {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tittle {
+    position: relative;
+    bottom: 22px;
+  }
+  .container-form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 24px;
+  }
+  .contanier-users {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .bgc-width {
+    width: 100vw;
+    height: 62vh;
+  }
+  .border {
+    width: 50vw;
+  }
+  .tittle {
+    position: relative;
+    bottom: 25px;
+  }
+  .tittle h1 {
+    font-size: 3rem;
+  }
+  .tittle p {
+    font-size: 1.5rem;
+  }
+  .contanier-users {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1032px) {
+  .border {
+    width: 80vw;
+  }
+  .contanier-users {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 412px) {
+  .border {
+    width: 100vw;
+  }
+  .tittle {
+    position: relative;
+    bottom: 44px;
+  }
+  .tittle h1 {
+    font-size: 3rem;
+  }
+  .tittle p {
+    font-size: 1.5rem;
+  }
+  .container-form {
+    position: relative;
+    bottom: 45px;
+  }
+  .contanier-users {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .bgc-width {
+    padding: 0em 1em;
+  }
+  .border {
+    width: 100vw;
+  }
+  .tittle {
+    position: relative;
+    bottom: 50px;
+  }
+  .tittle h1 {
+    font-size: 3rem;
+  }
+  .tittle p {
+    font-size: 1.5rem;
+  }
+  .container-form {
+    position: relative;
+    bottom: 45px;
+  }
 }

@@ -30,18 +30,42 @@ document.querySelector(".hamburger").addEventListener("click", function () {
 document
   .querySelector(".dropdown > li > a")
   .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent the default behavior of the link
+    event.preventDefault();
     document.querySelector(".dropdown-content").classList.toggle("active");
   });
 
 //CardFlip
-document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.querySelectorAll(".js_project");
+const projects = document.querySelectorAll(".js_project");
 
-  projects.forEach((project) => {
-    project.addEventListener("click", function () {
-      this.classList.toggle("flipped");
-    });
+projects.forEach((project) => {
+  const openButton = project.querySelector("#openButton");
+  const modal = project.querySelector(".modal");
+
+  project.addEventListener("click", function (event) {
+    event.stopPropagation();
+    this.classList.toggle("flipped");
+  });
+  // Open a Window
+  openButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    modal.style.display = "block";
+  });
+
+  const closeButton = modal.querySelector(".close");
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+  // DownLoad btn
+
+  const downloadButton = modal.querySelector("#downloadButton");
+  downloadButton.addEventListener("click", function () {
+    alert("התחיל פעולת הורדה...");
   });
 });
 
@@ -56,7 +80,6 @@ if (myForm) {
   const submitBtn = document.getElementById("submitBtn");
   if (submitBtn) {
     submitBtn.addEventListener("click", function (event) {
-      // Trigger the form submission when the button is clicked
       myForm.dispatchEvent(new Event("submit"));
     });
   }

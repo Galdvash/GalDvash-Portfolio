@@ -4,62 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timer</title>
-    <script defer src="script.js"></script>
-    <script defer src="script2.js"></script>
-    <script defer src="script3.js"></script>
-    <script defer src="globalScript.js"></script>
-    <link rel="stylesheet" href="globalStyle.css">
+    <title>Document</title>
+    <script defer type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="watch.css">
 </head>
 
 <body>
-    <div class="iphone_Container">
-        <nav class="nav_container">
-            <ul class="ul_list">
-                <li class="list_item">
-                    <img src="imagesWatch/countdown_counter_period_stopwatch_timer_icon.png" class="ul_Icon">
-                    </img>
-                    <p>Timer</p>
-                </li>
-                <li class="list_item">
-                    <img src="imagesWatch/stop_watch_icon.png" class="ul_Icon iconTwo">
-                    </img>
-                    <p>Stop Watch</p>
-                </li>
-                <li class="list_item">
-                    <img src="imagesWatch/earth_global_globe_internet_network_icon.png" class="ul_Icon"></img>
-                    <p>World Clock</p>
-                </li>
-            </ul>
-        </nav>
-        <div class="timer">
-            <p class="output">--:--</p>
-        </div>
-        <div class="timer_container">
-            <h3>Countdown</h3>
-            <hr>
+    <div class="container">
+        <div class="userSide">
+            <nav class="navbar">
+                <ul>
+                    <li id="worldClockSection"><img id="worldIcon" src="imagesWatch/globe-solid.svg" alt=""> <span>
+                            World
+                            Clock</span></li>
+                    <li id="timerSection"><img id="timerIcon" src="imagesWatch/clock-solid.svg" alt="" class="iconTwo">
+                        <span> Timer</span>
+                    </li>
+                    <li id="stopwatchSection"><img id="stopwatchIcon" src="imagesWatch/stopwatch-20-solid.svg" alt="">
+                        <span>Stop
+                            Watch</span>
+                    </li>
 
-            <div class="timer_buttons">
-                <button class="btn_start">START</button>
-                <button class="btn_restart">RESTART</button>
-                <button class="btn_delete">STOP</button>
+                </ul>
+            </nav>
+            <div class="watch">
+                <div class="overlay">
+                    <h6 id="currentTime"></h6>
+                </div>
+                <div>
+                    <h6 id="current_timezone"></h6>
+                </div>
+                <div>
+                    <img class="battery" src="imagesWatch/battery.png" alt="">
+                </div>
+                <div>
+                    <img class="wifi" src="imagesWatch/wi-fi.png" alt="">
+                </div>
+
+                <div id="worldclock" class="worldclock">
+                    <h2>
+                        Choose a country to display it's time
+                    </h2> <br>
+                    <select name="" id="list"></select>
+
+                </div>
+                <div id="timer" class="timer">
+                    <h2>Insert time</h2>
+                    <div class="timerWrap">
+                        <label for="">Min:</label>
+                        <input type="number" id="inputMin" min="0" max="59" placeholder="00">
+                        <label for="">Sec:</label>
+                        <input type="number" id="inputSec" min="0" max="59" placeholder="00">
+                    </div>
+                    &nbsp;
+                    <div class="timerBtnWrap">
+                        <button id="timerBtn">Start</button>
+                        <button id="timerResetBtn">Reset</button>
+                    </div>
+                </div>
+                <div id="stopwatch">
+                    <h2>Start the stop watch</h2>
+                    <div class="swBtnWrapper">
+                        <button id="swStartBtn">Start</button>
+                        <button id="swLapBtn">Restart</button>
+                    </div>
+                    &nbsp;
+                    <div class="swListWrap">
+                        <ul id="swList"></ul>
+                    </div>
+                </div>
             </div>
-            <div>
-                <input type="number" id="inputMin" placeholder="Add Min">
-                <input type="number" id="inputSec" placeholder="Add Sec">
-            </div>
         </div>
 
-        <div class="world_Watch">
-
-        </div>
-
-        <div class="stop_Watch">
-            <div class="stopWatch_buttons">
-                <button class="btn_start">START</button>
-                <button class="btn_stop">STOP</button>
-            </div>
-        </div>
     </div>
 </body>
 
