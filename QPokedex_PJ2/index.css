@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0d0e0f;
+  background-color: blue;
 }
 
 body,
@@ -57,7 +57,9 @@ main {
 .pokemonBox {
   display: flex;
   margin-top: 2rem;
+  height: 15vh;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .pokemonBox img {
@@ -90,4 +92,32 @@ ul#suggestionsList li {
 
 ul#suggestionsList li:hover {
   background-color: #ddd;
+}
+.div.pokemonList {
+  width: 100vw; /* Set the width to full viewport width */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: pokemon-counter;
+  padding-left: 20px;
+}
+
+#pokemonList li {
+  border: 1px solid;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#pokemonList img {
+  width: 50px;
+  margin-right: 10px;
 }

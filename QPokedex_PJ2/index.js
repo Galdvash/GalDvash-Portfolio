@@ -1,8 +1,34 @@
-document.querySelector("#search").addEventListener("click", getPokemon);
+// Fetch all Pokemon names
+getAllPokemon();
+
+function getAllPokemon() {
+  const pokemonList = document.querySelector("#pokemonList");
+
+  // Fetch all Pokemon names
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=1118")
+    .then((response) => response.json())
+    .then((data) => {
+      const pokemonNames = data.results.map((pokemon) => pokemon.name);
+      displayPokemonList(pokemonNames, pokemonList);
+    })
+    .catch((error) => {
+      console.log("Error fetching Pokemon list:", error);
+    });
+}
+
+function displayPokemonList(pokemonNames, listElement) {
+  pokemonNames.forEach((pokemonName) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = pokemonName;
+    listElement.appendChild(listItem);
+  });
+}
 
 document
   .querySelector("#pokemonName")
-  .addEventListener("input", getPokemonSuggestions);
+  .addEventListener("input", getPokemonSuggestions); //Calback Function With Fetch Api
+
+document.querySelector("#search").addEventListener("click", getPokemon);
 
 function FirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -33,6 +59,30 @@ function getPokemonSuggestions() {
     .catch((err) => {
       console.log("Error fetching Pokemon suggestions", err);
     });
+}
+function displayPokemonList(pokemonNames, listElement) {
+  pokemonNames.forEach((pokemonName) => {
+    // Create a list item
+    const listItem = document.createElement("li");
+
+    // Create an image element for the Pokémon
+    const img = document.createElement("img");
+    img.src = `https://img.pokemondb.net/sprites/home/normal/${pokemonName}.png`;
+    img.alt = pokemonName;
+
+    // Append the image to the list item
+    listItem.appendChild(img);
+
+    // Create a span for the Pokémon name
+    const nameSpan = document.createElement("span");
+    nameSpan.textContent = FirstLetter(pokemonName);
+
+    // Append the span to the list item
+    listItem.appendChild(nameSpan);
+
+    // Append the list item to the list
+    listElement.appendChild(listItem);
+  });
 }
 
 function displaySuggestions(suggestions) {

@@ -87,17 +87,26 @@
 
     font-family: Poppins;
   }
+
   .work_portfolio h1 {
     position: absolute;
-    left: 1em;
+    width: 100%;
+    top: 8rem;
+    left: 6rem;
     font-size: 5rem;
   }
-  .work_portfolio p {
-    position: absolute;
-    text-align: left;
-    width: 60%;
-    left: 3em;
-    font-size: 2rem;
+  .work_portfolio h2 {
+    position: relative;
+    top: 14rem;
+    left: 6rem;
+    font-size: 5rem;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 13rem;
+    left: 6rem;
+    width: 100%;
+    font-size: 5rem;
   }
   /* JS PROJECTS */
   .grid_ScriptProject {
@@ -114,12 +123,34 @@
   }
 
   .form {
-    width: 40vw; /* Adjust width for smaller screens */
+    width: 58%; /* Adjust width for smaller screens */
   }
 }
 
 /* @Media 1005px */
 @media screen and (max-width: 1005px) {
+  /* Work Protfolio */
+  .work_portfolio h1 {
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 6rem;
+    font-size: 3rem;
+  }
+  .work_portfolio h2 {
+    position: relative;
+    top: 14rem;
+    left: 6rem;
+    font-size: 3rem;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 13.5rem;
+    left: 6rem;
+    width: 100%;
+    font-size: 3rem;
+  }
+  /* Div logo */
   .div_logo a {
     margin-left: 1em;
     margin-right: 1em;
@@ -130,9 +161,15 @@
     margin-right: 0.5em;
   }
   /* HTML PROJECTS */
+  .about-text {
+    width: 96%;
+  }
   .grid_main {
-    width: 90%;
-    grid-template-columns: repeat(2, 1fr);
+    width: 83%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item {
+    width: 27vw;
   }
   /* JS PROJECTS */
   .grid_ScriptProject {
@@ -145,10 +182,11 @@
   }
   /* FORM */
   .container_form {
+    height: 60vh;
   }
 
   .form {
-    width: 70vw;
+    width: 73%;
   }
   .image-container {
     padding-bottom: 8.6em;
@@ -164,17 +202,26 @@
 
 /* @Media 760px */
 @media screen and (max-width: 760px) {
+  /* Work Protfolio */
   .work_portfolio h1 {
-    font-size: 3.5rem;
-    top: 11rem;
-    left: 5.2rem;
-  }
-  .work_portfolio p {
     position: absolute;
-    text-align: left;
-    width: 60%;
-    left: 4em;
-    font-size: 1.5rem;
+    width: 100%;
+    top: 11rem;
+    left: 2rem;
+    font-size: 2.5rem;
+  }
+  .work_portfolio h2 {
+    position: relative;
+    top: 14rem;
+    left: 2rem;
+    font-size: 2.5rem;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 13.5rem;
+    left: 2rem;
+    width: 100%;
+    font-size: 2.5rem;
   }
   .div_logo {
     flex-wrap: wrap;
@@ -188,16 +235,34 @@
     margin-left: 1em;
     margin-right: 1em;
   }
-  /* JS PROJECTS */
+  /* HTML Projects */
+  .profile-img {
+    width: 20%;
+  }
+  .about-text {
+    width: 97%;
+  }
+  .grid_main {
+    width: 82vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item {
+    width: 42vw;
+    height: 47vh;
+    padding-bottom: 2em;
+  }
+
+  /* JS Projects*/
   .grid_ScriptProject {
-    width: 90vw;
+    width: 77vw;
     margin: 1.5em auto;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
   }
 
   .js_project {
-    width: 80vw;
+    width: 38vw;
+    height: 35vh;
     padding-bottom: 2em;
   }
 
@@ -213,9 +278,11 @@
   .container_form {
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
   .form {
-    padding-bottom: 2em;
+    padding-top: 15em;
+    width: 90%;
   }
   .form .btn {
     width: 38%;
@@ -235,29 +302,47 @@
     overflow: auto;
   }
   .work_portfolio h1 {
-    font-size: 3rem;
-    top: 11rem;
-    left: 3rem;
-  }
-  .work_portfolio p {
     position: absolute;
-    text-align: left;
-    width: 81%;
-    left: 2.4em;
-    font-size: 1.5rem;
-    top: 10em;
+    width: 100%;
+    top: 11rem;
+    left: 0.2rem;
+    font-size: 2rem;
+  }
+  .work_portfolio h2 {
+    position: relative;
+    top: 14rem;
+    left: 0.2rem;
+    font-size: 2rem;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 13.5rem;
+    left: 0.2rem;
+    width: 100%;
+    font-size: 2rem;
+  }
+  /* About */
+  .about-text {
+    width: 100%;
+    padding: 1rem 2.1rem;
+    font-size: 1.11rem;
+    -webkit-text-stroke: 0.2px teal;
   }
   /* HTML PROJECTS */
   .main_text h3 {
-    font-size: 2rem;
+    font-size: 3.2rem;
+    -webkit-text-stroke: 0.6px teal;
   }
 
   .main_text p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    -webkit-text-stroke: 1px teal;
+    padding: 0rem 1rem;
   }
 
   .grid_main {
-    width: 95%;
+    width: 76%;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -291,7 +376,7 @@
   }
   /* JS PROJECTS */
   .section {
-    height: 211vh;
+    height: 175vh;
   }
 
   .js_countainer {
@@ -317,6 +402,17 @@
   .js_project button {
     width: 8em;
     font-size: 14px;
+  }
+  /* Form */
+  .container_form {
+    width: 100%;
+    height: 90vh;
+  }
+  .form {
+    padding-bottom: 1rem;
+  }
+  .form .p {
+    font-size: 1rem;
   }
 }
 
@@ -398,24 +494,30 @@
 
   /* Work Portfolio */
   .work_portfolio {
-    position: relative;
     width: 100%;
     height: 100%;
   }
   .work_portfolio h1 {
-    position: absolute;
-    left: 0.766666em;
-    top: 3.2em;
+    position: relative;
+    left: 4.5rem;
+    top: 9.2rem;
     font-size: 2.8rem;
     text-shadow: 2px 10px 2px black;
   }
-  .work_portfolio p {
-    position: absolute;
-    text-align: center;
-    width: 80%;
-    left: 2.2em;
-    top: 11em;
-    font-size: 1.2rem;
+
+  .work_portfolio h2 {
+    position: relative;
+    top: 9rem;
+    left: 2rem;
+    font-size: 1.9rem;
+    text-shadow: 2px 10px 2px black;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 9rem;
+    left: 0.6rem;
+    width: 100%;
+    font-size: 2rem;
     text-shadow: 2px 10px 2px black;
   }
 
@@ -445,9 +547,8 @@
 
   .about-text {
     padding: 0.9em 0;
-    width: 90%;
-    font-size: 0.9rem;
-    color: #3a3a3a;
+    width: 91%;
+    font-size: 1rem;
   }
   .about-btn {
     width: 42%;
@@ -469,7 +570,7 @@
   }
   .main_text {
     width: 98%;
-    height: 47vh;
+    height: 35vh;
     padding: 0 7%;
     display: flex;
     flex-direction: column;
@@ -481,12 +582,11 @@
     background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
   }
   .main_text h3 {
-    font-size: 1.563rem;
+    font-size: 2.5rem;
     padding-bottom: 0.7em;
   }
   .main_text p {
-    font-size: 1.1rem;
-    padding-bottom: 50px;
+    font-size: 1.3rem;
   }
   .grid_main {
     width: 100%;
@@ -504,7 +604,7 @@
   /* js */
   .section {
     width: 100%;
-
+    height: 308vh;
     background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
   }
   .js_countainer {
@@ -517,8 +617,8 @@
     justify-content: center;
   }
   .main_textjs {
-    width: 100%;
-    height: 47vh;
+    width: 98%;
+    height: 35vh;
     padding: 0 5px;
     display: flex;
     flex-direction: column;
@@ -529,12 +629,12 @@
     background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
   }
   .main_textjs h3 {
-    font-size: 1.563rem;
+    font-size: 2.5rem;
     padding-bottom: 0.7em;
   }
   .main_textjs p {
-    font-size: 1.1rem;
-    padding-bottom: 50px;
+    font-size: 1.3rem;
+    padding: 0rem 1rem;
   }
 
   .grid_ScriptProject {
@@ -543,7 +643,7 @@
   }
   .js_project {
     width: 80%;
-    height: 100%;
+    height: 35vh;
     margin-top: 50px;
     margin-left: 2.55em;
   }
@@ -557,24 +657,26 @@
   /* Media Form */
   .container_form {
     width: 100%;
+    height: 68vh;
+    padding-top: 1rem;
   }
 
   .form {
-    margin-right: 1em;
     width: 310px;
     color: #ffffff;
     font: normal normal bold 16px/24px Heebo;
+    padding-top: 1rem;
   }
 
   .form .h3 {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
   }
   .form .p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 
   .singel-label {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .h_input {
@@ -615,16 +717,15 @@
   /* Footer */
   footer.services {
     width: 100%;
-    height: 400px;
+    height: 23vh;
   }
+
   .logo {
-    width: 34vw;
-    height: 12vh;
+    width: 33vw;
+    height: 8vh;
   }
   .copyright {
     height: 22px;
-    position: absolute;
-    margin-top: 320px;
   }
   .copyright p {
     font-size: 0.6rem;

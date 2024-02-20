@@ -16,7 +16,7 @@ body {
 
 .header {
   width: 100%;
-  height: 72vh;
+  height: 100vh;
 }
 
 .navbar {
@@ -136,27 +136,39 @@ body {
 .work_portfolio h1 {
   position: absolute;
   width: 100%;
-  top: 9rem;
-  left: 14rem;
+  top: 14rem;
+  left: 13rem;
   -webkit-text-stroke: 2.5px teal; /* Width and color of the border (webkit prefix for Safari) */
   color: rgb(224, 224, 224);
-  font-size: 6rem;
+  font-size: 5.4rem;
   text-shadow: 2px 3px 15px #13eaf1bd;
 }
-.work_portfolio p {
-  position: absolute;
-  width: 30%;
-  top: 17rem;
-  left: 15rem;
-  -webkit-text-stroke: 1.5px teal; /* Width and color of the border (webkit prefix for Safari) */
-  color: rgb(207, 207, 207);
-  font-size: 2rem;
+.work_portfolio h2 {
+  position: relative;
+  top: 21.5rem;
+  left: 13rem;
+  width: 100%;
+  -webkit-text-stroke: 2.5px teal;
+  color: rgb(224, 224, 224);
+  font-size: 4.4rem;
+  text-shadow: 2px 3px 15px #13eaf1bd;
 }
+.work_portfolio h3 {
+  position: relative;
+  top: 21rem;
+  left: 13rem;
+  width: 100%;
+  -webkit-text-stroke: 2.5px teal;
+  color: rgb(224, 224, 224);
+  font-size: 4.6rem;
+  text-shadow: 2px 3px 15px #13eaf1bd;
+}
+
 /* Icons */
 .div_logo {
   display: flex;
   width: 100%;
-  padding: 13px 0px;
+  padding: 25px 0px;
   justify-content: center;
   align-items: center;
 
@@ -187,20 +199,23 @@ body {
 /* About */
 .about_me {
   width: 100%;
-  height: 100vh;
+  height: 93vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
+  padding-top: 5rem;
 }
 .container-Text {
   text-align: center;
   width: 80%;
 }
 .fText {
-  color: white;
-  font-size: 20px;
+  -webkit-text-stroke: 2.5px teal;
+
+  color: rgb(224, 224, 224);
+  font-size: 2.2rem;
   font-family: "Poppins";
 }
 .secText {
@@ -218,11 +233,14 @@ body {
   padding: 0.2em 0.2em;
 }
 .about-text {
-  padding: 1.1em 0;
+  padding: 1rem 2rem;
   width: 50%;
   text-align: center;
-  font-size: 1.25rem;
-  color: #3a3a3a;
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px teal;
+  color: rgb(224, 224, 224);
+  line-height: 1.5;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .about-btn {
   width: 260px;
@@ -251,26 +269,31 @@ body {
   text-align: center;
 }
 .main_text h3 {
-  font-size: 2.5rem;
   padding-bottom: 11px;
+  font-size: 3.2rem;
+  -webkit-text-stroke: 0.6px teal;
 }
 .main_text p {
-  font-size: 1.25rem;
   margin-bottom: 10px;
+  -webkit-text-stroke: 0.6px teal;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 /* Projects */
 
 .grid_main {
-  width: 65%;
+  width: 73%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
 }
 
 .item {
-  width: 90%;
+  width: 23vw;
   padding-bottom: 2em;
   border-radius: 9%;
   box-shadow: 3px 3px 15px #00000029;
@@ -288,7 +311,7 @@ body {
   width: 100%;
   height: fit-content;
   box-shadow: 3px 3px 15px #00000029;
-  border-radius: 29px;
+  border-radius: 15px;
 }
 .grid_main h6 {
   font-size: 1.6rem;
@@ -327,7 +350,7 @@ body {
 /* JavaScript Projects */
 .section {
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
 }
 .js_countainer {
@@ -336,11 +359,27 @@ body {
   padding-top: 5em;
 }
 .main_textjs {
+  /* font-family: ; */
+  margin: auto;
   text-align: center;
 }
+.main_textjs h3 {
+  font-size: 3.2rem;
+  -webkit-text-stroke: 0.6px teal;
+  padding-bottom: 11px;
+  text-transform: capitalize;
+}
+.main_textjs p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  -webkit-text-stroke: 0.6px teal;
+  color: white;
+}
 .grid_ScriptProject {
-  width: 50vw;
-  height: 75%;
+  width: 71vw;
+  height: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 3.5em auto;
@@ -360,7 +399,7 @@ body {
 }
 
 .js_project {
-  width: 15vw;
+  width: 22vw;
   padding-bottom: 4em;
   border-radius: 10px;
   border: solid 0.2em rgb(165, 165, 38);
@@ -413,47 +452,29 @@ body {
 /* Form */
 .container_form {
   width: 100%;
+  height: 80vh;
   background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
-  padding-left: 150px;
+
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-}
-.image-container {
-  padding-bottom: 8.1em;
-  position: relative;
-
-  display: inline-block;
-}
-.image-container::before {
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 82%;
-  background: #149999;
-  mix-blend-mode: multiply;
-}
-.image-container img {
-  background-image: black;
-  width: 100%;
-  border-radius: 50%;
+  justify-content: center;
 }
 
 .form {
   width: 48%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #ffffff;
   font: normal normal bold 16px/24px Heebo;
+  padding-bottom: 4rem;
 }
 
 .form .h3 {
   font: normal normal 900 36px/53px Heebo;
 }
 .form .p {
+  width: 90%;
   font: normal normal normal 20px/29px Heebo;
 }
 
@@ -491,34 +512,39 @@ body {
 
 footer.services {
   width: 100vw;
-  height: 177px;
-  background: #1ae0ec 0% 0% no-repeat padding-box;
-}
-.logo_bar {
   display: flex;
   text-align: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-top: 21px;
+  justify-content: center;
+  height: 17.5vh;
+  background: #1ae0ec 0% 0% no-repeat padding-box;
 }
-.logo p {
-  text-align: center;
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    color: blue;
-  }
+.logo_bar {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0rem;
 }
+
+.logo a {
+  text-decoration: none;
+  color: black;
+  padding: 0rem 0.2rem;
+}
+.logo a:hover {
+  color: blue;
+}
+
 /* Copyright */
 
 .copyright {
   width: 100%;
-  height: 48px;
+  height: 61.5%;
   background: #000000 0% 0% no-repeat padding-box;
-  position: absolute;
-  margin-top: 105px;
+  position: relative;
+  top: 15px;
 }
 .copyright {
   display: flex;
