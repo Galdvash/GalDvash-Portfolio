@@ -1,0 +1,238 @@
+@media screen and (max-width: 1439px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .header {
+    width: 100%;
+    height: 31em;
+    overflow: auto;
+  }
+
+  .profile h4 {
+    display: none;
+  }
+
+  .profile img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 2em;
+    top: 8px;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: block;
+  }
+  .hamburger a {
+    color: #1ae0ec;
+    font-size: 1.5em;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #65f7fc63;
+    position: absolute;
+    top: 3.2em;
+  }
+
+  .nav-list.active {
+    display: block;
+  }
+
+  .nav-list li {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .nav-list a {
+    font-size: 1em;
+  }
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: -5px;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    text-align: center;
+  }
+  .dropdown-content li {
+    padding-bottom: 0.8em;
+    padding-top: 0.3em;
+    font-size: 0.8rem;
+  }
+
+  /* Work Protfolio */
+  .work_portfolio {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(bgc_WorkProtfolio.png);
+    overflow-x: hidden;
+
+    font-family: Poppins;
+  }
+
+  .work_portfolio h1 {
+    position: absolute;
+    top: 9rem;
+    left: 6rem;
+    font-size: 4rem;
+  }
+  .work_portfolio h2 {
+    position: relative;
+    top: 14rem;
+    left: 6rem;
+    font-size: 3rem;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 13rem;
+    left: 6rem;
+    width: 100%;
+    font-size: 3.1rem;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width:1023px)) {
+  /* Div Logo */
+  .div_logo {
+    flex-wrap: wrap;
+    a {
+      padding-bottom: 5px;
+    }
+  }
+  .icon {
+    width: 65%;
+  }
+  /* About Me */
+  .about-text {
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+  }
+  /* Html Projects */
+  .grid_main {
+    grid-template-columns: repeat(2, 0fr);
+  }
+  /* JS project */
+  .grid_ScriptProject {
+    grid-template-columns: repeat(2, 0fr);
+  }
+  .js_project {
+  }
+  /* Form */
+  .form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* Work Protfolio */
+  .work_portfolio {
+    display: flex;
+    justify-content: center;
+  }
+  .lowerSizeText {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    text-align: center;
+  }
+  .work_portfolio h1 {
+    position: relative;
+    left: 0rem;
+    top: 0rem;
+    font-size: 3rem;
+    text-shadow: 2px 10px 2px black;
+  }
+
+  .work_portfolio h2 {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    font-size: 2.2rem;
+    text-shadow: 2px 10px 2px black;
+  }
+  .work_portfolio h3 {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    font-size: 2.3rem;
+    text-shadow: 2px 10px 2px black;
+  }
+  /* Div Logo */
+  .div_logo {
+    flex-wrap: wrap;
+    a {
+      padding: 5px 4px;
+    }
+  }
+  .icon {
+    width: 75px;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+  /* About Me */
+  .about-text {
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    -webkit-text-stroke: 0.9px teal;
+    line-height: 1.2;
+  }
+  .profile-img {
+    width: 20%;
+  }
+  .about-btn {
+  }
+  /* Html Projects */
+  .grid_main {
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .main_text {
+    width: 97%;
+    height: 47vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    box-shadow: 0px 50px 50px;
+    background: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
+    padding: 0 5px;
+    p {
+      padding: 0 6px;
+      font-size: 1.1rem;
+    }
+  }
+  /* JS Projects */
+  .js_project {
+    height: 48vh;
+  }
+
+  .grid_ScriptProject {
+    padding-top: 4rem;
+    grid-template-columns: repeat(1, 0fr);
+  }
+  /* Form */
+  .form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .div_logo {
+    a {
+      padding: 7px 12px;
+    }
+  }
+}
