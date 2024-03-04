@@ -43,7 +43,7 @@ function getPokemonSuggestions() {
   const inputText = inputElement.value;
 
   // Fetch Pokemon names that start with the input letter
-  fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=0`)
+  fetch(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=0`)
     .then((response) => response.json())
     .then((data) => {
       const suggestions = data.results.map((pokemon) => pokemon.name);

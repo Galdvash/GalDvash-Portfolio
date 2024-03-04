@@ -43,11 +43,15 @@ li {
 }
 
 .nav-list {
+  display: block;
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   float: right;
-  margin-right: 300px;
+  /* margin-right: 127px; */
 }
+
 .nav-list li {
   line-height: 2;
 }
@@ -69,11 +73,15 @@ li {
 }
 
 .profile h4 {
+  display: block;
   position: fixed;
   left: 300px;
-  top: 15px;
-  box-shadow: 0px 2px 10px #13eaf179;
-  z-index: 1;
+  top: 13px;
+  font-size: 1.6em;
+  font-family: "Satisfy", cursive;
+  color: #13eaf1bd;
+  text-shadow: 1px 3px 16px #13eaf1bd;
+  letter-spacing: 1.3px;
 }
 
 .work_portfolio {
