@@ -230,6 +230,10 @@
   }
 }
 @media screen and (max-width: 390px) {
+  .js_project {
+    height: 60vh;
+  }
+
   .div_logo {
     a {
       padding: 7px 12px;
