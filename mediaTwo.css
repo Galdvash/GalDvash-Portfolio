@@ -129,8 +129,7 @@
   .grid_ScriptProject {
     grid-template-columns: repeat(2, 0fr);
   }
-  .js_project {
-  }
+  
   /* Form */
   .form {
     width: 70%;
