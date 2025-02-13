@@ -1,123 +1,152 @@
+/* Reset & בסיס */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: blue;
 }
 
-body,
-input,
-textarea,
-select,
-button {
-  color: white;
+body {
+  background-color: #f2f2f2; /* רקע בהיר */
   font: 400 1rem "Roboto", sans-serif;
+  color: #333;
 }
 
-button {
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-
+/* תבנית מרכזית */
 main {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* תיבת חיפוש */
 .searchBox {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .searchBox input {
-  border-radius: 8px 0 0 8px;
-  border: 0;
+  flex: 1;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 1rem;
   outline: none;
-  height: 36px;
-  padding: 4px 16px;
-  background-color: white;
-  color: #000;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .searchBox button {
-  border-radius: 0 8px 8px 0;
-  border: 0;
-  height: 36px;
-  padding: 4px 16px;
-  background-color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.pokemonBox {
-  display: flex;
-  margin-top: 2rem;
-  height: 15vh;
-  justify-content: center;
-  margin-bottom: 100px;
+.searchBox button:hover {
+  background-color: #cc0000;
 }
 
-.pokemonBox img {
-  width: 200px;
-}
-
-.pokemonBox p {
-  margin-top: 1rem;
-}
-
-.pokemonBox .pokemonInfos {
-  padding: 2rem;
-}
-
-ul#suggestionsList {
-  list-style-type: none;
-  padding: 0;
+/* הצעות חיפוש */
+#suggestionsList {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  list-style: none;
+  padding: 0.5rem;
   margin: 0;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   max-height: 200px;
   overflow-y: auto;
+  z-index: 100;
 }
 
-ul#suggestionsList li {
-  padding: 10px;
+#suggestionsList li {
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-ul#suggestionsList li:hover {
-  background-color: #ddd;
-}
-.div.pokemonList {
-  width: 100vw; /* Set the width to full viewport width */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#suggestionsList li:hover {
+  background-color: #f2f2f2;
 }
 
+/* כרטיסי פוקימון (תצוגת תוצאות) */
+.pokemonBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pokemonBox .pokemonCard {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  width: 600px;
+  height: 400px;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.pokemonBox .pokemonCard:hover {
+  transform: scale(1.05);
+}
+
+.pokemonBox .pokemonCard img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.pokemonBox .pokemonCard h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pokemonBox .pokemonCard p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+/* רשימת הפוקימונים (אם יש תצוגה נוספת) */
 #pokemonList {
   display: flex;
   flex-wrap: wrap;
-  counter-reset: pokemon-counter;
-  padding-left: 20px;
+  padding: 1rem;
 }
 
 #pokemonList li {
-  border: 1px solid;
   list-style: none;
+  margin: 0.5rem;
   display: flex;
   align-items: center;
-  margin-right: 20px;
-  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: #fff;
 }
 
 #pokemonList img {
-  width: 50px;
-  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+  margin-right: 0.5rem;
 }

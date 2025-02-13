@@ -1,15 +1,34 @@
-// Fetch all Pokemon names
-getAllPokemon();
+let allPokemonNames = [];
+
+init();
+
+function init() {
+  getAllPokemon();
+
+  document
+    .querySelector("#pokemonName")
+    .addEventListener("input", debounce(getPokemonSuggestions, 300));
+
+  // מאזין ללחיצה על כפתור החיפוש
+  document.querySelector("#search").addEventListener("click", getPokemon);
+
+  document
+    .querySelector("#pokemonName")
+    .addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        getPokemon(e);
+      }
+    });
+}
 
 function getAllPokemon() {
   const pokemonList = document.querySelector("#pokemonList");
 
-  // Fetch all Pokemon names
   fetch("https://pokeapi.co/api/v2/pokemon?limit=1118")
     .then((response) => response.json())
     .then((data) => {
-      const pokemonNames = data.results.map((pokemon) => pokemon.name);
-      displayPokemonList(pokemonNames, pokemonList);
+      allPokemonNames = data.results.map((pokemon) => pokemon.name);
+      displayPokemonList(allPokemonNames, pokemonList);
     })
     .catch((error) => {
       console.log("Error fetching Pokemon list:", error);
@@ -17,72 +36,43 @@ function getAllPokemon() {
 }
 
 function displayPokemonList(pokemonNames, listElement) {
+  // מנקה את הרשימה הקיימת
+  listElement.innerHTML = "";
   pokemonNames.forEach((pokemonName) => {
     const listItem = document.createElement("li");
-    listItem.textContent = pokemonName;
+
+    // יצירת תמונה
+    const img = document.createElement("img");
+    img.src = `https://img.pokemondb.net/sprites/home/normal/${pokemonName}.png`;
+    img.alt = pokemonName;
+    listItem.appendChild(img);
+
+    // יצירת שם הפוקימון
+    const nameSpan = document.createElement("span");
+    nameSpan.textContent = FirstLetter(pokemonName);
+    listItem.appendChild(nameSpan);
+
+    listItem.addEventListener("click", () => {
+      document.querySelector("#pokemonName").value = FirstLetter(pokemonName);
+      getPokemon();
+      document
+        .querySelector(".searchBox")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+
     listElement.appendChild(listItem);
   });
-}
-
-document
-  .querySelector("#pokemonName")
-  .addEventListener("input", getPokemonSuggestions); //Calback Function With Fetch Api
-
-document.querySelector("#search").addEventListener("click", getPokemon);
-
-function FirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function lowerCaseName(string) {
-  return string.toLowerCase();
 }
 
 function getPokemonSuggestions() {
   const inputElement = document.querySelector("#pokemonName");
-  const inputText = inputElement.value;
+  const inputText = inputElement.value.toLowerCase();
 
-  // Fetch Pokemon names that start with the input letter
-  fetch(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=0`)
-    .then((response) => response.json())
-    .then((data) => {
-      const suggestions = data.results.map((pokemon) => pokemon.name);
+  const filteredSuggestions = allPokemonNames.filter((name) =>
+    name.toLowerCase().startsWith(inputText)
+  );
 
-      // Filter suggestions based on input text
-      const filteredSuggestions = suggestions.filter((name) =>
-        lowerCaseName(name).startsWith(lowerCaseName(inputText))
-      );
-
-      // Display suggestions
-      displaySuggestions(filteredSuggestions);
-    })
-    .catch((err) => {
-      console.log("Error fetching Pokemon suggestions", err);
-    });
-}
-function displayPokemonList(pokemonNames, listElement) {
-  pokemonNames.forEach((pokemonName) => {
-    // Create a list item
-    const listItem = document.createElement("li");
-
-    // Create an image element for the Pokémon
-    const img = document.createElement("img");
-    img.src = `https://img.pokemondb.net/sprites/home/normal/${pokemonName}.png`;
-    img.alt = pokemonName;
-
-    // Append the image to the list item
-    listItem.appendChild(img);
-
-    // Create a span for the Pokémon name
-    const nameSpan = document.createElement("span");
-    nameSpan.textContent = FirstLetter(pokemonName);
-
-    // Append the span to the list item
-    listItem.appendChild(nameSpan);
-
-    // Append the list item to the list
-    listElement.appendChild(listItem);
-  });
+  displaySuggestions(filteredSuggestions.slice(0, 20));
 }
 
 function displaySuggestions(suggestions) {
@@ -93,46 +83,72 @@ function displaySuggestions(suggestions) {
     const suggestionItem = document.createElement("li");
     suggestionItem.textContent = FirstLetter(pokemon);
 
-    // Add a click event listener to select the suggestion
     suggestionItem.addEventListener("click", () => {
       document.querySelector("#pokemonName").value = FirstLetter(pokemon);
-      suggestionsList.innerHTML = ""; // Clear suggestions
+      suggestionsList.innerHTML = "";
+      getPokemon();
+      document
+        .querySelector(".pokemonBox")
+        .scrollIntoView({ behavior: "smooth" });
     });
 
     suggestionsList.appendChild(suggestionItem);
   });
 }
-
 function getPokemon(e) {
+  if (e) e.preventDefault();
+
   const name = document.querySelector("#pokemonName").value;
   const pokemonName = lowerCaseName(name);
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then((response) => response.json())
     .then((data) => {
-      // Get types of the Pokémon
+      // שליפת מידע
       const types = data.types.map((type) => type.type.name);
+      const abilities = data.abilities.map((ability) => ability.ability.name);
+      const stats = data.stats
+        .map((stat) => `<span>${stat.stat.name}: ${stat.base_stat}</span>`)
+        .join(" ");
 
-      // Create a string to display types
-      const typesString = types.join(", ");
-
+      // עדכון האזור להצגת מידע עם עיצוב חדש
       document.querySelector(".pokemonBox").innerHTML = `
-        <div>
-          <img src="${
-            data.sprites.other["official-artwork"].front_default
-          }" alt="${FirstLetter(data.name)}">
-        </div>
-        <div class="pokemonInfo">
-          <h1>"${FirstLetter(data.name)}"</h1>
-          <p>Types: ${typesString}</p>
-          <p>Weight: ${data.weight}</p>
-          <p>Height: ${data.height}</p>
+        <div class="pokemonCard">
+          <div class="pokemonImage">
+            <img src="${
+              data.sprites.other["official-artwork"].front_default
+            }" alt="${FirstLetter(data.name)}">
+          </div>
+          <div class="pokemonDetails">
+            <h1>${FirstLetter(data.name)}</h1>
+            <p><strong>Types:</strong> ${types.join(", ")}</p>
+            <p><strong>Abilities:</strong> ${abilities.join(", ")}</p>
+            <div class="pokemonStats"><strong>Stats:</strong> ${stats}</div>
+            <p><strong>Weight:</strong> ${data.weight}</p>
+            <p><strong>Height:</strong> ${data.height}</p>
+          </div>
         </div>
       `;
     })
     .catch((err) => {
       console.log("Pokemon not found", err);
     });
+}
 
-  e.preventDefault();
+function FirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function lowerCaseName(string) {
+  return string.toLowerCase();
+}
+
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
 }
