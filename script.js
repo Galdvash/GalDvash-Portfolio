@@ -1,6 +1,6 @@
 // change I AM secText
 let secTextElement = document.querySelector(".secText");
-let replacementWords = ["Full Stack Developer", "Designer", "Believe My Work"];
+let replacementWords = ["Hello World", "Welcome", "To My Pfolio"];
 let currentIndex = 0;
 
 function changeText() {

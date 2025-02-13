@@ -11,82 +11,75 @@
     <link rel="stylesheet" href="index.css">
     <!-- <link rel="stylesheet" href="media.css"> -->
     <link rel="stylesheet" href="mediaTwo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <script defer src="scriptAnimation.js"></script>
     <script defer src="script.js"></script>
 </head>
 
 <body>
-    <header id="main" class="header">
-        <nav class="navbar">
-            <div class="profile">
-                <a href="#"> <img src="images/profile-image.png" alt="profileimg"></a>
-                <h4>Gal dvash</h4>
-            </div>
-            <div>
-                <div id="hamburger" class="hamburger"><a href="javascript:void(0);">&#9776; </a> </div>
+    <!-- <div id="splash">
+        <h1>Welcome To My Portfolio</h1>
+    </div> -->
 
-                <ul id="myLinks" class="nav-list">
-                    <li><a href="#main">Main</a></li>
-                    <li><a href="#about">About</a></li>
-                    <ul class="dropdown">
-                        <li><a>Projects</a></li>
-                        <ul class="dropdown-content">
-                            <li><a href="#projectHtml">ProjectHtml</a></li>
-                            <li><a href="#projectJavaScript">JSProject</a></li>
-                        </ul>
-                    </ul>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <!-- work_portfolio -->
-        <div class="work_portfolio">
-            <div class="lowerSizeText">
-                <h1>Full Stack</h1>
-                <h2>FrontEnd & BackEnd</h2>
-                <h3>Designer & Developer </h3>
-                <h3></h3>
-            </div>
-            <!-- <p>
-                
-                .</sub>
-            </p> -->
+    <nav class="navbar" id="main">
+        <div class="profile">
+            <a href="#"> <img src="images/profile-image.png" alt="profileimg"></a>
+            <h4>Gal dvash</h4>
         </div>
-    </header>
+        <div>
+            <div id="hamburger" class="hamburger"><a href="javascript:void(0);">&#9776; </a> </div>
 
-    <div class="div_logo">
+            <ul id="myLinks" class="nav-list">
+                <li><a href="#main">Main</a></li>
+                <li><a href="#about">About</a></li>
+                <ul class="dropdown">
+                    <li><a>Projects</a></li>
+                    <ul class="dropdown-content">
+                        <li><a href="#projectHtml">ProjectHtml</a></li>
+                        <li><a href="#projectJavaScript">JSProject</a></li>
+                    </ul>
+                </ul>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="line"></div>
 
-        <a target="blank"
-            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"><img
-                class="icon" src="images/icon_bar/Html_icon.png" alt=""></a>
-        <a target="blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"><img
-                class="icon" src="images/icon_bar/Css_icon.png" alt=""></a>
-        <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img class="icon"
-                src="images/icon_bar/JavaScript_icon.png" alt=""></a>
-        <a target="blank" href="https://getbootstrap.com/"><img class="icon" src="images/icon_bar/BootsTrap.png"
-                alt=""></a>
-        <a target="blank" href="https://sass-lang.com/"> <img class="icon" src="images/icon_bar/Sass_icon.png"
-                alt=""></a>
-        <a target="blank" href="https://www.typescriptlang.org/"><img class="icon"
-                src="images/icon_bar/TypeScript_icon.png" alt=""></a>
-        <a target="blank" href="https://www.redhat.com/en/topics/api/what-is-a-rest-api"> <img class="icon icon1 "
-                src="images/icon_bar/API_icon.png" alt=""></a>
-        <a target="blank" href="https://react.dev/"> <img class="icon" src="images/icon_bar/React_icon.png" alt=""></a>
-        <a target="blank" href="https://nodejs.org/en"><img class="icon" src="images/icon_bar/NodeJs_icon.png"
-                alt=""></a>
+    <!-- work_portfolio -->
 
-        <li id="about"></li>
 
     </div>
+    <!-- 
+    <div class="div_logo">
+        
+        <a target="blank"
+        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"><img
+        class="icon" src="images/icon_bar/Html_icon.png" alt=""></a>
+        <a target="blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"><img
+            class="icon" src="images/icon_bar/Css_icon.png" alt=""></a>
+            <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img class="icon"
+                src="images/icon_bar/JavaScript_icon.png" alt=""></a>
+                <a target="blank" href="https://getbootstrap.com/"><img class="icon" src="images/icon_bar/BootsTrap.png"
+                    alt=""></a>
+                    <a target="blank" href="https://sass-lang.com/"> <img class="icon" src="images/icon_bar/Sass_icon.png"
+                        alt=""></a>
+                        <a target="blank" href="https://www.typescriptlang.org/"><img class="icon"
+                            src="images/icon_bar/TypeScript_icon.png" alt=""></a>
+                            <a target="blank" href="https://www.redhat.com/en/topics/api/what-is-a-rest-api"> <img class="icon icon1 "
+                                src="images/icon_bar/API_icon.png" alt=""></a>
+                                <a target="blank" href="https://react.dev/"> <img class="icon" src="images/icon_bar/React_icon.png" alt=""></a>
+                                <a target="blank" href="https://nodejs.org/en"><img class="icon" src="images/icon_bar/NodeJs_icon.png"
+                                    alt=""></a>
+
+                                    <li id="about"></li>
+                                </div> -->
     <!-- About Me -->
     <div class="about_me">
-        <img class="profile-img" src="images/profile-image.png" alt="profileimg"><br>
-        <h1 class="about-title">About Me </h1>
-        <div class="container-Text">
-            <span class="fText text">I am</span><br>
-            <span class="secText text"></span>
-
-        </div>
+        <img class="profile-img" src="images/profile-image.png" alt="profileimg">
+        <code class="secText text"></code>
         <p class="about-text"><big>W</big>elcome, My name is <big>Gal Dvash</big> born in '98,
             Technology has always been in my surrounding, At home, and at work.
             I worked at "PhaseOne" a camera company that developed and produced equipment for big Tech companies.
@@ -97,19 +90,18 @@
             And Now, Here We Are:
             I Invite You To Browse My works That I Developed And Designed,
             Specializing in <big style="font-size:2.5rem; ">FullStack </big> <big> FrontEnd</big> & <big>BackEnd </big>
-
-
-
-
-
         </p>
-        <button class="about-btn"><a href="./galdvash.pdf " download="">
-                Download
-                Resumes</a></button>
-
-
     </div>
 
+    <div class="work_portfolio">
+        <div class="text_container ">
+            <h1 class="autoBlur">GAL DVASH</h1>
+            <h1 class="autoBlur">FULL-STACK-Dev🧑🏻‍💻</h1>
+            <h1 class="autoBlur">DESIGNER🪄</h1>
+            <h1 class="autoBlur">PROJECTS📄</h1>
+            <h1 class="autoBlur">SEE MORE ⬇</h1>
+        </div>
+    </div>
     <main id="projectHtml" class="main">
         <div class="main_text">
             <h3>selected works</h3>
