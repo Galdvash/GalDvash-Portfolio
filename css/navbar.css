@@ -1,0 +1,102 @@
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: larger;
+}
+.hamburger a {
+  color: #1ae0ec;
+  font-size: 2em;
+  position: fixed;
+  right: 1.5em;
+  top: 0.3em;
+  z-index: 2;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navbar {
+  position: fixed;
+  border: none;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 55px;
+  padding: 20px 0px;
+  z-index: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-list li {
+  text-align: center;
+  margin: 0 20px 0 30px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+/* הצבע של הלינק בעת לחיצה (active) */
+.nav-list li a.activeLinksline {
+  color: #f5f5dc; /* לבן */
+}
+
+/* עיצוב קו שמתחת ללינק */
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  background-color: #f5f5dc; /* לבן */
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+/* בעת ריחוף – אפשר להשאיר את הצבע הכתום */
+.nav-list a:hover {
+  color: #f7771d;
+}
+
+.nav-list a:hover::before {
+  transform: scaleX(1);
+}
+
+/* עיצוב בסיסי של הלינקים – כתום כברירת מחדל */
+.nav-list a {
+  font-size: 1.1rem;
+  color: #f7771d; /* כתום */
+  text-decoration: none;
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+}
+.nav-list.active {
+  display: block;
+}
+.line {
+  position: fixed;
+  top: 55px;
+  background-color: #f7771d;
+  z-index: 2000;
+  height: 5px;
+  animation: lined 1s linear forwards;
+  animation-timeline: scroll();
+}
+@keyframes lined {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#about {
+  list-style: none;
+}

@@ -1,0 +1,73 @@
+/* About */
+.about_me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+
+  color: #f5f5dc;
+}
+
+.profile-img {
+  width: 300px;
+  height: 390px;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 33px;
+  margin-right: 4em;
+}
+.about-text {
+  text-align: left;
+  font-size: 1.9rem;
+  width: 47vw;
+  line-height: 1.5;
+}
+.btnPortfolio {
+  position: relative;
+  bottom: 4em;
+  left: 28.85em;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: wheat;
+  border: white 1px solid;
+  border-radius: 50px;
+  width: fit-content;
+  height: 60px;
+  font-family: Matter, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.imgStar {
+  background-color: white; /* הצבע שממלא את הצורה */
+  color: white;
+  -webkit-mask: url("/images/diamond.png") no-repeat center;
+  mask: url("/images/diamond.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: 32px;
+  border: 5px solid white;
+  height: 32px;
+  padding-right: 3em;
+  transform-style: preserve-3d;
+  animation: screwSpin 2s linear infinite;
+  cursor: pointer;
+}
+.linkToForm {
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes screwSpin {
+  from {
+    transform: perspective(500px) rotate3d(1, 1, 0, 0deg);
+  }
+  to {
+    transform: perspective(500px) rotate3d(0, 1, 0, 360deg);
+  }
+}

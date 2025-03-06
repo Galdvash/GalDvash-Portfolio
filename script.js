@@ -1,6 +1,6 @@
 // change I AM secText
 let secTextElement = document.querySelector(".secText");
-let replacementWords = ["Hello World", "Welcome", "To My Pfolio"];
+let replacementWords = ["Hello World", "WELCOME !", "To My Portfolio"];
 let currentIndex = 0;
 
 function changeText() {
@@ -8,7 +8,7 @@ function changeText() {
   currentIndex = (currentIndex + 1) % replacementWords.length;
 }
 
-setInterval(changeText, 1000);
+setInterval(changeText, 1200);
 
 //icon bar
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,47 +27,6 @@ document.querySelector(".hamburger").addEventListener("click", function () {
 });
 
 // Function open Projects Links
-document
-  .querySelector(".dropdown > li > a")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector(".dropdown-content").classList.toggle("active");
-  });
-
-//CardFlip
-const projects = document.querySelectorAll(".js_project");
-
-projects.forEach((project) => {
-  const openButton = project.querySelector("#openButton");
-  const modal = project.querySelector(".modal");
-
-  project.addEventListener("click", function (event) {
-    event.stopPropagation();
-    this.classList.toggle("flipped");
-  });
-  // Open a Window
-  openButton.addEventListener("click", function (event) {
-    event.stopPropagation();
-    modal.style.display = "block";
-  });
-
-  const closeButton = modal.querySelector(".close");
-  closeButton.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-  // DownLoad btn
-
-  const downloadButton = modal.querySelector("#downloadButton");
-  downloadButton.addEventListener("click", function () {
-    alert("התחיל פעולת הורדה...");
-  });
-});
 
 //Requierd Form Inputo
 const myForm = document.getElementById("myForm");
@@ -125,3 +84,84 @@ function isValidPhone(phone) {
 
   return phoneRegex.test(phone);
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const listItems = document.querySelectorAll(".nav-list li a");
+  listItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      listItems.forEach((a) => a.classList.remove("activeLinksline"));
+      // מוסיפים את המחלקה active לקישור שנלחץ
+      item.classList.add("activeLinksline");
+    });
+  });
+});
+
+var app = {
+  words: [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "React",
+    "Vue",
+    "MongoDB",
+    "Express",
+    "TypeScript",
+    "Webpack",
+    "GitHub",
+    "Docker",
+    "Console.log()",
+    "Bootstrap",
+    "Tailwind",
+    "Hello World",
+    "SQL",
+    "NoSQL",
+    "Firebase",
+    "REST",
+    "API",
+  ],
+
+  init: function () {
+    app.container = document.createElement("div");
+    app.container.className = "animation-container";
+    // במקום להוסיף ל-body, מוסיפים לאלמנט עם id="animation-wrapper"
+    var targetContainer = document.getElementById("animation-wrapper");
+    if (targetContainer) {
+      targetContainer.appendChild(app.container);
+    } else {
+      console.error(
+        'לא נמצא אלמנט עם id="animation-wrapper". ודא שקיים HTML מתאים.'
+      );
+    }
+    window.setInterval(app.add, 240);
+  },
+
+  add: function () {
+    var element = document.createElement("span");
+    app.container.appendChild(element);
+    app.animate(element);
+  },
+
+  animate: function (element) {
+    var word = app.words[Math.floor(Math.random() * app.words.length)];
+    var duration = Math.floor(Math.random() * 24) + 1;
+    var offset = Math.floor(Math.random() * (80 - duration * 2)) + 3;
+    var size = 16 + (16 - duration);
+    element.style.cssText =
+      "left:" +
+      offset +
+      "vw; font-size:" +
+      size +
+      "px; animation-duration:" +
+      duration +
+      "s";
+
+    element.innerHTML = word;
+    window.setTimeout(app.remove, duration * 1500, element);
+  },
+
+  remove: function (element) {
+    element.parentNode.removeChild(element);
+  },
+};
+
+document.addEventListener("DOMContentLoaded", app.init);

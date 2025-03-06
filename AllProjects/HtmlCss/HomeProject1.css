@@ -1,0 +1,295 @@
+:root {
+  /* משתנים לצבעים, רקעים ואפקטים */
+  --primary-color: #1ae0ec;
+  --secondary-color: #121a1a;
+  --accent-color: #095a5a;
+  --navbar-bg: linear-gradient(100deg, #141414, #181717, #008080);
+  --background-gradient: linear-gradient(90deg, #121a1a, #095a5a, #121a1a);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--secondary-color);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ======= Navbar ======= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 6.5vh;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 3px solid var(--primary-color);
+  box-shadow: 0px 3px 6px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+  transition: background 0.5s ease;
+}
+
+.navbar:hover {
+  background: var(--background-gradient);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+/* ======= Header / Splash Area ======= */
+.header {
+  width: 100vw;
+  height: 48vh;
+  background: var(--background-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======= Profile ======= */
+.profile img {
+  width: 40px;
+  position: fixed;
+  top: 10px;
+  left: 200px;
+  box-shadow: 0 2px 10px var(--primary-color);
+  border-radius: 5px;
+  z-index: 101;
+}
+
+.profile h4 {
+  position: fixed;
+  top: 13px;
+  left: 300px;
+  font-size: 1.6em;
+  font-family: "Satisfy", cursive;
+  color: var(--primary-color);
+  text-shadow: 1px 3px 16px var(--primary-color);
+  letter-spacing: 1.3px;
+  z-index: 101;
+}
+
+/* ======= Work Portfolio ======= */
+.work_portfolio {
+  margin: 10em auto;
+  padding: 2em;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.work_portfolio h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.work_portfolio p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+/* ======= כפתורים ======= */
+.btn {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn a {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* ======= Logo Section with Glassmorphism ======= */
+.div_logo {
+  width: 100%;
+  height: 130px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 3px 6px var(--shadow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.div_logo ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_logo li {
+  margin: 0 1em;
+  max-width: 5vw;
+}
+
+/* ======= Image Project Section ======= */
+.container-img {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.bigimg1 {
+  width: 70%;
+  height: 80vh;
+  object-fit: cover;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  margin-top: 9em;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+img.bigimg1:hover {
+  transform: scale(1.05);
+}
+
+/* ======= Copyright ======= */
+.copyright {
+  width: 100vw;
+  height: 48px;
+  background: var(--secondary-color);
+  border-bottom: 6px solid var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.copyright p {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 390px) {
+  .profile img {
+    margin-left: -165px;
+    margin-top: 0.8px;
+    width: 11vw;
+  }
+  .profile h4 {
+    display: none;
+  }
+  .nav-list {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 35px;
+    top: 15px;
+    font-size: 20px;
+    z-index: 101;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+  .hamburger:hover ~ .nav-list {
+    display: block;
+    width: 100%;
+    background-color: var(--light-bg);
+    border: 1px solid rgba(101, 247, 252, 0.39);
+    position: relative;
+    left: 300px;
+    top: 46px;
+  }
+  .nav-list li {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-list a {
+    font-size: 1em;
+  }
+  .work_portfolio h1 {
+    font-size: 2.5rem;
+  }
+  .btn {
+    width: 31vw;
+    height: 25px;
+  }
+  .btn a {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .div_logo {
+    width: 100%;
+    height: 25vh;
+  }
+  .div_logo ul {
+    margin-right: 24px;
+    flex-wrap: wrap;
+  }
+  .div_logo li {
+    max-width: 8vw;
+  }
+  .div_logo img {
+    width: 19vw;
+  }
+  .container-img {
+    height: 0;
+  }
+  img.bigimg1 {
+    width: 96vw;
+    height: 32vh;
+    margin-top: 65px;
+  }
+  .copyright {
+    margin-top: 350px;
+  }
+}
