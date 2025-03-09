@@ -138,6 +138,11 @@
     margin-top: 15em;
     margin-bottom: 20em;
   }
+  .text_container div {
+    font-size: 1.4rem;
+    margin-top: 25px;
+  }
+
   .btnPortfolio {
     left: 19%;
   }
@@ -159,9 +164,28 @@
   }
 }
 @media screen and (max-width: 475px) {
+  .hamburger {
+    position: fixed;
+    right: 0.5em;
+  }
   .hamburger a {
     position: fixed;
-    right: 0em;
+    right: 0.5em;
+  }
+  .skills {
+    height: 50vh;
+    margin-top: 0em;
+  }
+  .text_container {
+    height: 67vh;
+  }
+  .text_container div {
+    font-size: 2.123rem;
+    margin-top: 30px;
+  }
+  .text_container div:nth-child(1) {
+    left: -20px;
+    top: 0px;
   }
   .btnPortfolio {
     left: 8%;

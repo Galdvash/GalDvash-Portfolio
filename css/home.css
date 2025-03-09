@@ -4,6 +4,7 @@
   filter: blur(0.8px);
   height: 100vh;
   top: -20px;
+  left: calc(20% - 20px);
   z-index: -1;
 }
 
@@ -15,7 +16,7 @@
   font-family: "Helvetica";
   text-shadow: 0 0 1px rgb(211, 211, 214);
   text-align: center;
-
+  user-select: none;
   pointer-events: none;
   cursor: default;
   z-index: 1;
@@ -64,12 +65,10 @@
   }
 }
 .secTextWarp {
-  position: absolute;
-  width: 100%;
-
-  top: 50%;
-
+  width: 100vw;
   height: 80px;
+  position: absolute;
+  top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
