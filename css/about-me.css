@@ -19,7 +19,7 @@
   object-fit: cover;
   object-position: center;
   margin-top: 3em;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 .about-text {
   text-align: left;
@@ -48,14 +48,14 @@
 }
 
 .imgStar {
-  background-color: white; /* הצבע שממלא את הצורה */
+  background-color: #fff;
+  background-image: url("/images/star.png");
   color: white;
-  /* -webkit-mask: url("/images/diamond.png") no-repeat center; */
   mask: url("/images/diamond.png") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  width: 32px;
   border: 5px solid white;
+  width: 32px;
   height: 32px;
   padding-right: 3em;
   transform-style: preserve-3d;
