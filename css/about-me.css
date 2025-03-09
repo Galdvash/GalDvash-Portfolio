@@ -50,7 +50,7 @@
 .imgStar {
   background-color: white; /* הצבע שממלא את הצורה */
   color: white;
-  -webkit-mask: url("/images/diamond.png") no-repeat center;
+  /* -webkit-mask: url("/images/diamond.png") no-repeat center; */
   mask: url("/images/diamond.png") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
