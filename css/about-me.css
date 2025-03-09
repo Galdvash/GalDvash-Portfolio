@@ -11,12 +11,15 @@
 }
 
 .profile-img {
-  width: 300px;
-  height: 390px;
-  background-color: white;
-  border-radius: 30px;
-  margin-top: 33px;
-  margin-right: 4em;
+  width: 17vw;
+  height: 43vh;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 3em;
+  margin-right: 1em;
 }
 .about-text {
   text-align: left;
