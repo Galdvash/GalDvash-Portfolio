@@ -19,7 +19,7 @@
   object-fit: cover;
   object-position: center;
   margin-top: 3em;
-  margin-right: 2em;
+  margin-right: 2.1em;
 }
 .about-text {
   text-align: left;
@@ -39,25 +39,20 @@
   color: wheat;
   border: white 1px solid;
   border-radius: 50px;
-  width: fit-content;
+  width: 17vw;
   height: 60px;
   font-family: Matter, sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   cursor: pointer;
 }
-
+.pBTN {
+  padding: 0px 15px 0px 15px;
+}
 .imgStar {
-  background-color: #fff;
-  background-image: url("/images/star.png");
-  color: white;
-  mask: url("/images/diamond.png") no-repeat center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  border: 5px solid white;
   width: 32px;
   height: 32px;
-  padding-right: 3em;
+  /* padding-right: 3em; */
   transform-style: preserve-3d;
   animation: screwSpin 2s linear infinite;
   cursor: pointer;
@@ -68,9 +63,9 @@
 }
 @keyframes screwSpin {
   from {
-    transform: perspective(500px) rotate3d(1, 1, 0, 0deg);
+    transform: perspective(500px) rotate3d(1, 0, 0, 0deg);
   }
   to {
-    transform: perspective(500px) rotate3d(0, 1, 0, 360deg);
+    transform: perspective(200px) rotate3d(0, 0, 0.2, 360deg);
   }
 }
