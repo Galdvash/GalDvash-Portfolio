@@ -26,8 +26,6 @@ document.querySelector(".hamburger").addEventListener("click", function () {
   document.querySelector(".nav-list").classList.toggle("active");
 });
 
-// Function open Projects Links
-
 //Requierd Form Inputo
 const myForm = document.getElementById("myForm");
 

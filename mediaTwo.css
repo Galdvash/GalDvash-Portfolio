@@ -1,35 +1,32 @@
 @media screen and (max-width: 1536px) {
-  .nav-list {
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-  }
-
   .nav-list.active {
     display: block;
+    padding-top: 5em;
   }
 
   .nav-list li {
     display: flex;
     justify-content: center;
   }
-  .nav-list a {
-    font-size: 2.5em;
-  }
 
   /* Work Protfolio */
-  .work_portfolio {
-    margin-top: 15em;
-    font-size: 5px;
+}
+@media screen and (max-width: 1280px) {
+  .about_me {
+    flex-direction: column;
+    margin-top: 10em;
+    margin-bottom: 15em;
   }
-  .text_container {
-    margin-top: 20em;
+  .profile-img {
+    margin-bottom: 2.5rem;
+    margin-right: 0em;
   }
   .about-text {
-    font-size: 5px;
+    font-size: clamp(1.7rem, 15vw, 1rem);
   }
-}
-@media screen and ((min-width: 768px) and (max-width:1203px)) {
+  .text_container div {
+    font-size: 5rem;
+  }
   /* Div Logo */
   .div_logo {
     flex-wrap: wrap;
@@ -41,10 +38,7 @@
     width: 65%;
   }
   /* About Me */
-  .about-text {
-    padding: 1rem 1rem;
-    font-size: 1.4rem;
-  }
+
   /* Html Projects */
   .grid_main {
     grid-template-columns: repeat(2, 0fr);
@@ -59,41 +53,36 @@
     width: 70%;
   }
 }
-@media screen and (max-width: 767px) {
-  /* Work Protfolio */
-  .work_portfolio {
-    display: flex;
-    justify-content: center;
+@media screen and (max-width: 1024px) {
+  .text_container div {
+    font-size: 4.5rem;
+    margin-top: 15px;
   }
-  .lowerSizeText {
-    display: flex;
-    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    position: fixed;
+    display: block;
+    right: 4em;
+    top: 1em;
+  }
+  .hamburger a {
+    color: #1ae0ec;
+    font-size: 2em;
+    position: fixed;
+    z-index: 2;
+  }
+  .navbar {
+    height: auto;
+    backdrop-filter: blur(10px);
+  }
+  .nav-list {
+    display: none;
+  }
+  .line {
+    top: calc(100%-20px);
+  }
 
-    flex-direction: column;
-    text-align: center;
-  }
-  .work_portfolio h1 {
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    font-size: 3rem;
-    text-shadow: 2px 10px 2px black;
-  }
-
-  .work_portfolio h2 {
-    position: relative;
-    top: 0rem;
-    left: 0rem;
-    font-size: 2.2rem;
-    text-shadow: 2px 10px 2px black;
-  }
-  .work_portfolio h3 {
-    position: relative;
-    top: 0rem;
-    left: 0rem;
-    font-size: 2.3rem;
-    text-shadow: 2px 10px 2px black;
-  }
   /* Div Logo */
   .div_logo {
     flex-wrap: wrap;
@@ -107,16 +96,10 @@
     margin-right: 0em;
   }
   /* About Me */
-  .about-text {
-    padding: 1rem 1rem;
-    font-size: 1.2rem;
-    -webkit-text-stroke: 0.9px teal;
-    line-height: 1.2;
+  .text_container div {
+    font-size: 3.4rem;
+    margin-top: 25px;
   }
-  .profile-img {
-    width: 20%;
-  }
-
   /* Html Projects */
   .grid_main {
     grid-template-columns: repeat(1, 0fr);
@@ -151,7 +134,22 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 640px) {
+  .text_container div {
+    font-size: 2.4rem;
+    margin-top: 32px;
+  }
+  .js_project {
+    height: 60vh;
+  }
+
+  .div_logo {
+    a {
+      padding: 7px 12px;
+    }
+  }
+}
+@media screen and (max-width: 475px) {
   .js_project {
     height: 60vh;
   }

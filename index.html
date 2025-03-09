@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <!-- Index Css Section -->
     <link rel="stylesheet" href="index.css">
@@ -16,10 +16,16 @@
     <link rel="stylesheet" href="css/navbar.css">
 
     <!-- Portfolio (HTML & CSS Projects) Section -->
-    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Portfolio (HTML & CSS Projects) Section -->
+    <link rel="stylesheet" href="css/projects.css">
 
     <!-- About Me Section -->
     <link rel="stylesheet" href="css/about-me.css">
+    <!-- About Me Section -->
+    <link rel="stylesheet" href="css/skills.css">
+    <!-- Form Me Section -->
+    <link rel="stylesheet" href="css/form.css">
 
     <!-- Footer Section -->
     <link rel="stylesheet" href="css/footer.css">
@@ -41,8 +47,9 @@
         <div id="hamburger" class="hamburger"><a href="javascript:void(0);">&#9776; </a> </div>
         <ul id="myLinks" class="nav-list">
             <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
@@ -100,30 +107,35 @@
     <!-- About Me -->
     <div class="about_me" id="about">
         <img class="profile-img" src="images/GalDvash.jpg" alt="profileimg">
-        <p class="about-text">
-            <br>
-            I'm a wev <span style="font-weight: 600; ">development</span> pragmatic professional with a determined "I
-            can do it" mindset, believing that nothing is impossible.
-            I am committed to independent learning and have developed a rapid learning ability paired with a deep
-            understanding of how things work. This dedication enables me to tackle complex challenges and drive projects
-            from inception to completion. I specialize in managing end-to-end components from scratch—including design,
-            planning, testing, development, and deployment—ensuring that every project not only meets but exceeds its
-            objectives.
-        </p>
-    </div>
-    <a class="linkToForm" href="#contact">
-
-        <button class="btnPortfolio">
-            <span class="imgStar">✦</span>
-            <p class="pBTN">Get in touch
+        <div class="container_textAbout">
+            <p class="about-text">
+                <br>
+                I'm a wev <span style="font-weight: 600; ">development</span> pragmatic professional with a determined
+                "I
+                can do it" mindset, believing that nothing is impossible.
+                I am committed to independent learning and have developed a rapid learning ability paired with a deep
+                understanding of how things work. This dedication enables me to tackle complex challenges and drive
+                projects
+                from inception to completion. I specialize in managing end-to-end components from scratch—including
+                design,
+                planning, testing, development, and deployment—ensuring that every project not only meets but exceeds
+                its
+                objectives.
             </p>
-            <span class="imgStar">✦</span>
-        </button>
-    </a>
+            <a class="linkToForm" href="#contact">
 
-
-    <div class="work_portfolio">
-
+                <button class="btnPortfolio">
+                    <span class="imgStar">✦</span>
+                    <p class="pBTN">Get in touch
+                    </p>
+                    <span class="imgStar">✦</span>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div id="skills"></div>
+    <div class="skills">
+        <h4>SKILLS & MINDSET</h4>
         <div class="text_container">
             <div class="autoBlur"> <span class="diamond" style="color: wheat;">✦</span>
                 Web <span class="movment">🧑🏻‍💻</span> Development</div>
@@ -168,45 +180,39 @@
     <!-- Footer -->
     <footer class="services">
 
-        <div class="logo_bar">
 
-            <div class="logo">
-                <a href="">
-                    <img src="images/Facebook.png" alt="">
-                </a>
-            </div>
-            <div class="logo">
-                <a href="">
-                    <img src=" images/Linkdin.png" alt="">
-                </a>
-            </div>
+        <div class="logo">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="icon instagram">
+                <span class="fab fa-instagram"></span>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="tel:+972523853070" class="icon phone">
+                <span class="fas fa-phone"></span>
+            </a>
+        </div>
 
-            <div class="logo">
-                <a href="https://wa.me/0523853070">
-                    <img src="/images/Location.png" alt="">
-                </a>
-            </div>
-            <div class="logo">
-                <a href="tel:0523853070">
-                    <img src="images/Phone.png" alt="">
-                </a>
-            </div>
-            <div class="logo">
-                <a href="whatsapp://send?phone=+972523853070">
-                    <img src="images/Whatsapp.png" alt="">
-                </a>
-            </div>
-            <div class="logo">
+        <div class="logo">
+            <a href="https://github.com/" target="_blank" class="icon github">
+                <span class="fab fa-github"></span>
+            </a>
 
-                <a href="mailto:Galdvash59@gmail.com">
-                    <img src="images/Email.png" alt="">
-                </a>
-            </div>
+        </div>
+        <div class="logo">
+            <a href="mailto:youremail@example.com" class="icon email">
+                <span class="fas fa-envelope"></span>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="https://wa.me/1234567890" target="_blank" class="icon whatsapp">
+                <span class="fab fa-whatsapp"></span>
+            </a>
+        </div>
 
-            <div class="copyright">
-                <p>Gal dvash</p>
-                <p><span>&#169;</span> All rights reserved</p>
-            </div>
+
+        <div class="copyright">
+            <p>Gal dvash</p>
+            <p><span>&#169;</span> All rights reserved</p>
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -1,0 +1,56 @@
+section {
+  width: 100%;
+  margin: auto;
+  max-width: 1250px;
+  margin-top: 60em;
+  padding: 0 40px;
+  color: rgb(243, 226, 191);
+  text-align: left;
+  font-family: Matter, sans-serif;
+  a.linkGroup {
+    text-decoration: none;
+    color: rgb(243, 226, 191);
+    cursor: url("data:image/svg+xml,%3csvg%20width='51'%20height='51'%20viewBox='0%200%2051%2051'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='1.0417'%20y='0.573608'%20width='49'%20height='49'%20rx='24.5'%20stroke='%23F9F8F6'/%3e%3cpath%20d='M32.5417%2025.0736H18.5417M32.5417%2025.0736L26.5417%2031.0736M32.5417%2025.0736L26.5417%2019.0736'%20stroke='%23F9F8F6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e")
+        16 16,
+      auto;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 6em;
+    margin-top: 5em;
+    font-family: Matter, sans-serif;
+  }
+}
+.custom-heading {
+  font-size: clamp(4rem, 4rem + 2vw, 6rem);
+
+  letter-spacing: -3px;
+  font-weight: 400;
+}
+.custom-paragraph {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+hr {
+  padding: 1em 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.group:hover .custom-heading,
+.group:hover .custom-paragraph {
+  color: whitesmoke;
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+.group:hover {
+  cursor: url("data:image/svg+xml,%3csvg%20width='51'%20height='51'%20viewBox='0%200%2051%2051'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='1.0417'%20y='0.573608'%20width='49'%20height='49'%20rx='24.5'%20stroke='%23F9F8F6'/%3e%3cpath%20d='M32.5417%2025.0736H18.5417M32.5417%2025.0736L26.5417%2031.0736M32.5417%2025.0736L26.5417%2019.0736'%20stroke='%23F9F8F6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e")
+      16 16,
+    auto;
+}

@@ -1,0 +1,57 @@
+/* Form */
+.container_form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 50%;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font: normal normal bold 16px/24px Heebo;
+}
+
+.form .h3 {
+  font: normal normal 900 36px/53px Heebo;
+}
+.form .p {
+  width: 90%;
+  font: normal normal normal 20px/29px Heebo;
+}
+
+.singel-label {
+  width: 90%;
+
+  padding: 10px 0 0 0;
+}
+
+.h_input {
+  width: 90%;
+  border: none;
+  height: 30px;
+  border-bottom: #cccccc 4px solid;
+}
+.form textarea {
+  width: 90%;
+  height: 100px;
+  resize: none;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  border-bottom: #1ae0ec 4px solid;
+}
+.form .btn {
+  background: #1ae0ec 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  border: none;
+  width: 20%;
+  font: normal normal bold 22px/30px Heebo;
+  cursor: pointer;
+  margin-top: 1em;
+}

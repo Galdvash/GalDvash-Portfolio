@@ -2,6 +2,7 @@
 .hamburger {
   display: none;
   font-size: larger;
+  position: fixed;
 }
 .hamburger a {
   color: #1ae0ec;
@@ -42,6 +43,7 @@
 
 /* הצבע של הלינק בעת לחיצה (active) */
 .nav-list li a.activeLinksline {
+  display: inline-block;
   color: #f5f5dc; /* לבן */
 }
 
@@ -70,6 +72,8 @@
 
 /* עיצוב בסיסי של הלינקים – כתום כברירת מחדל */
 .nav-list a {
+  position: relative;
+
   font-size: 1.1rem;
   color: #f7771d; /* כתום */
   text-decoration: none;
