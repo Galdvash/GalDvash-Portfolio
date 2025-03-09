@@ -10,7 +10,7 @@ html {
 }
 body {
   scroll-behavior: smooth;
-
+  overflow-x: hidden;
   font-family: Matter, sans-serif;
   background: rgb(22, 22, 22);
   overflow-x: hidden;

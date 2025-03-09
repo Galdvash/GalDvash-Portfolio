@@ -27,7 +27,7 @@
 }
 .about-text {
   text-align: left;
-  font-size: clamp(2rem, 15vw, 0rem);
+  font-size: 2rem;
   line-height: 1.5;
   padding-bottom: 4rem;
 }
@@ -43,7 +43,6 @@
   color: wheat;
   border: white 1px solid;
   border-radius: 50px;
-
   font-family: Matter, sans-serif;
   font-size: 1.8rem;
   font-weight: 400;

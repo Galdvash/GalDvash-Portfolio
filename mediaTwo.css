@@ -1,7 +1,8 @@
 @media screen and (max-width: 1536px) {
   .nav-list.active {
-    display: block;
+    display: grid;
     padding-top: 5em;
+    align-content: center;
   }
 
   .nav-list li {
@@ -16,6 +17,7 @@
     flex-direction: column;
     margin-top: 10em;
     margin-bottom: 15em;
+    max-width: 900px;
   }
   .profile-img {
     margin-bottom: 2.5rem;
@@ -27,33 +29,21 @@
   .text_container div {
     font-size: 5rem;
   }
-  /* Div Logo */
-  .div_logo {
-    flex-wrap: wrap;
-    a {
-      padding-bottom: 5px;
-    }
-  }
-  .icon {
-    width: 65%;
-  }
-  /* About Me */
 
-  /* Html Projects */
-  .grid_main {
-    grid-template-columns: repeat(2, 0fr);
-  }
-  /* JS project */
-  .grid_ScriptProject {
-    grid-template-columns: repeat(2, 0fr);
-  }
-
-  /* Form */
   .form {
     width: 70%;
   }
 }
 @media screen and (max-width: 1024px) {
+  .about_me {
+    max-width: 850px;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .btnPortfolio {
+    left: 25%;
+  }
   .text_container div {
     font-size: 4.5rem;
     margin-top: 15px;
@@ -63,14 +53,13 @@
   .hamburger {
     position: fixed;
     display: block;
-    right: 4em;
-    top: 1em;
   }
   .hamburger a {
     color: #1ae0ec;
     font-size: 2em;
     position: fixed;
     z-index: 2;
+    right: 1em;
   }
   .navbar {
     height: auto;
@@ -96,6 +85,15 @@
     margin-right: 0em;
   }
   /* About Me */
+  .about_me {
+    max-width: 650px;
+  }
+  .btnPortfolio {
+    left: 24%;
+  }
+  .about-text {
+    font-size: 1.7rem;
+  }
   .text_container div {
     font-size: 3.4rem;
     margin-top: 25px;
@@ -135,6 +133,17 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .about_me {
+    max-width: 550px;
+    margin-top: 15em;
+    margin-bottom: 20em;
+  }
+  .btnPortfolio {
+    left: 19%;
+  }
+  .about-text {
+    font-size: 1.5rem;
+  }
   .text_container div {
     font-size: 2.4rem;
     margin-top: 32px;
@@ -150,6 +159,13 @@
   }
 }
 @media screen and (max-width: 475px) {
+  .hamburger a {
+    position: fixed;
+    right: 0em;
+  }
+  .btnPortfolio {
+    left: 8%;
+  }
   .js_project {
     height: 60vh;
   }
