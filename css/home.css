@@ -3,8 +3,6 @@
   position: absolute;
   filter: blur(0.8px);
   height: 100vh;
-  top: -20px;
-  left: calc(20% - 20px);
   z-index: -1;
 }
 
@@ -25,7 +23,7 @@
   will-change: transform, opacity;
   animation-timing-function: ease-out;
   animation-name: move;
-  white-space: nowrap; /* מונע שבירת שורה במילים ארוכות */
+  white-space: nowrap;
 }
 
 @keyframes move {

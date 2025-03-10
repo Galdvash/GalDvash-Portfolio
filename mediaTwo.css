@@ -27,7 +27,7 @@
     font-size: clamp(1.7rem, 15vw, 1rem);
   }
   .text_container div {
-    font-size: 5rem;
+    font-size: 4.4rem;
   }
 
   .form {
@@ -45,8 +45,8 @@
     left: 25%;
   }
   .text_container div {
-    font-size: 4.5rem;
-    margin-top: 15px;
+    font-size: 3.53rem;
+    margin-top: 24px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -72,21 +72,12 @@
     top: calc(100%-20px);
   }
 
-  /* Div Logo */
-  .div_logo {
-    flex-wrap: wrap;
-    a {
-      padding: 5px 4px;
-    }
-  }
-  .icon {
-    width: 75px;
-    margin-left: 0em;
-    margin-right: 0em;
+  section {
+    max-width: 500px;
   }
   /* About Me */
   .about_me {
-    max-width: 650px;
+    max-width: 600px;
   }
   .btnPortfolio {
     left: 24%;
@@ -94,8 +85,13 @@
   .about-text {
     font-size: 1.7rem;
   }
+  /* skills */
+  .skills {
+    max-width: 600px;
+  }
+
   .text_container div {
-    font-size: 3.4rem;
+    font-size: 3rem;
     margin-top: 25px;
   }
   /* Html Projects */
@@ -134,13 +130,9 @@
 }
 @media screen and (max-width: 640px) {
   .about_me {
-    max-width: 550px;
+    max-width: 470px;
     margin-top: 15em;
     margin-bottom: 20em;
-  }
-  .text_container div {
-    font-size: 1.4rem;
-    margin-top: 25px;
   }
 
   .btnPortfolio {
@@ -149,10 +141,12 @@
   .about-text {
     font-size: 1.5rem;
   }
+  /* skills */
   .text_container div {
-    font-size: 2.4rem;
-    margin-top: 32px;
+    font-size: 2rem;
+    margin-top: 25px;
   }
+
   .js_project {
     height: 60vh;
   }
@@ -187,8 +181,15 @@
     left: -20px;
     top: 0px;
   }
+  .about_me {
+    max-width: 400px;
+  }
+  .about-text {
+    font-size: 1.2rem;
+  }
   .btnPortfolio {
     left: 8%;
+    width: 50px;
   }
   .js_project {
     height: 60vh;
