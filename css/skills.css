@@ -49,7 +49,6 @@
   left: 0px;
 }
 .diamond {
-  scale: 0.7;
   display: inline-block; /* חיוני כדי לאפשר טרנספורמציות */
   animation: rotateDiamond 2s linear infinite;
 }
