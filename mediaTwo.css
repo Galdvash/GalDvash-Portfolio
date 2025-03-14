@@ -25,6 +25,7 @@
   }
   .about-text {
     font-size: clamp(1.7rem, 15vw, 1rem);
+    text-align: center;
   }
   .text_container div {
     font-size: 4.4rem;
@@ -42,7 +43,7 @@
     text-align: center;
   }
   .btnPortfolio {
-    left: 25%;
+    left: 28.33%;
   }
   .text_container div {
     font-size: 3.53rem;

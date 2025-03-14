@@ -14,7 +14,38 @@ body {
   user-select: none;
   width: 100vw;
 }
+.main_text {
+  /* font-family: ; */
+  margin: auto;
+  text-align: center;
+}
 
+.main_text h3 {
+  letter-spacing: -0.3px;
+  color: #f7771d;
+  -webkit-text-stroke: 1.3px rgb(243, 226, 191);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.52;
+  margin-bottom: 4em;
+  margin-top: 5em;
+  font-family: Matter, sans-serif;
+}
+
+.main_text p {
+  -webkit-text-stroke: 1.1px rgb(243, 226, 191);
+  color: rgb(243, 226, 191);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 1.4px;
+  margin-bottom: 4em;
+}
 .js_countainer {
   width: 100%;
   padding-top: 12em;
