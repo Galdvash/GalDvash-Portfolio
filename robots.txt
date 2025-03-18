@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://galdvash.github.io/GalDvash-Portfolio/sitemap.xml
